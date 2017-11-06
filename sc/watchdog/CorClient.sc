@@ -17,6 +17,7 @@ import org.json4s.native.JsonMethods._
 import org.json4s.native.Serialization
 import org.json4s.native.Serialization.writePretty
 import $file.util, util._
+import $file.^.jena, jena.jena
 
 implicit val jsonFormats = DefaultFormats ++ JodaTimeSerializers.all
 
@@ -73,18 +74,41 @@ class CorClient(config: Config) {
     items.filter(_.uri.startsWith("http://sweetontology.net/"))
   }
 
-  def register(iri: String, file: File, bytes: Array[Byte],
-               brandNew: Boolean
-              ): Unit = {
+  def getOntology(iri: String): String = {
+    val url = endpoint + "/v0/ont"
+    val response: HttpResponse[String] = Http(url)
+      .param("oiri", iri)
+      .option(HttpOptions.followRedirects(true))
+      .asString
 
-    val uploadResult = uploadOntology(iri, file, bytes)
-    //println(s"\t\t- uploadResult: filename=${uploadResult.filename} format=${uploadResult.format}")
-    doRegister(iri, uploadResult, brandNew)
+    if (response.code == 200)
+      response.body
+    else
+      error(s"failed to retrieve url=$url ⇒ ${response.code}: ${response.body}")
   }
 
-  def uploadOntology(iri: String, file: File, bytes: Array[Byte]): UploadedFileInfo = {
+  def register(iri: String, sweetContents: String, brandNew: Boolean): Unit = {
+    val uploadResult = uploadOntology(iri, sweetContents)
+    //println(s"\t\t- uploadResult: filename=${uploadResult.filename} format=${uploadResult.format}")
+
+    val name: String = {
+      val ontModel = jena.loadOntModel(sweetContents, iri)
+      val nameOpt = for {
+        ontology ← Option(ontModel.getOntology(iri))
+        name ← jena.getValue(ontology, org.apache.jena.vocabulary.RDFS.label)
+      } yield name
+      nameOpt getOrElse "-"
+    }
+
+    doRegister(iri, name, uploadResult, brandNew)
+  }
+
+  def uploadOntology(iri: String, sweetContents: String): UploadedFileInfo = {
     val route = endpoint + "/v0/ont/upload"
     println("\t\t- uploading")
+
+    import java.nio.charset.StandardCharsets
+    val bytes = sweetContents.getBytes(StandardCharsets.UTF_8)
 
     val response: HttpResponse[String] = Http(route)
       .timeout(connTimeoutMs = 5 * 1000, readTimeoutMs = 60 * 1000)
@@ -99,13 +123,8 @@ class CorClient(config: Config) {
     parse(response.body).extract[UploadedFileInfo]
   }
 
-  def doRegister(iri: String, ufi: UploadedFileInfo, brandNew: Boolean
+  def doRegister(iri: String, name: String, ufi: UploadedFileInfo, brandNew: Boolean
                 ): OntologyRegistrationResult = {
-
-    val name: String = {
-      //val rdfsLabel = "http://www.w3.org/2000/01/rdf-schema#label"
-      "TODO name"
-    }
 
     val params = List[(String, String)](
       "iri" → iri,
@@ -159,9 +178,5 @@ class CorClient(config: Config) {
       else
         error(s"registering new revision of iri=$iri: " + response)
     }
-  }
-
-  def unregister(iri: String): Unit = {
-    println("\t\t" + Red("unregister not implemented."))
   }
 }
