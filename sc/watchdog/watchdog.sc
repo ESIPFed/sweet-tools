@@ -56,7 +56,8 @@ def update(): Unit = {
   traverse(corClient, corInfo, gitInfo)(
     handleChanged = register(brandNew = false),
     handleAdded   = register(brandNew = true),
-    handleRemoved = unregister
+    handleRemoved = unregister,
+    traverseEnded = updateInfo
   )
 
   def register(brandNew: Boolean)(iri: String): Unit = {
@@ -70,9 +71,13 @@ def update(): Unit = {
     println("\t\t" + Red("unregistration not implemented."))
   }
 
-  println("Updating local info...")
-  saveInfo(corInfo, corPath, corPathBak)
-  saveInfo(gitInfo, gitPath, gitPathBak)
+  def updateInfo(cr: CompareResult): Unit = {
+    print("Updating local info... ")
+    Console.out.flush()
+    saveInfo(corInfo, corPath, corPathBak)
+    saveInfo(gitInfo, gitPath, gitPathBak)
+    println("Done.")
+  }
 }
 
 def refreshGithubInfo(): Map[String, Sha256] = {
@@ -82,16 +87,17 @@ def refreshGithubInfo(): Map[String, Sha256] = {
 def traverse(corClient: CorClient, corInfo: Map[String, Sha256], gitInfo: Map[String, Sha256])
             (handleChanged: String ⇒ Unit = (_) ⇒ (),
              handleAdded:   String ⇒ Unit = (_) ⇒ (),
-             handleRemoved: String ⇒ Unit = (_) ⇒ ()
+             handleRemoved: String ⇒ Unit = (_) ⇒ (),
+             traverseEnded: CompareResult ⇒ Unit = (_) ⇒ println(s"Done.")
             ): Unit = {
   compareInfos(gitInfo, corInfo) match {
-    case Some(CompareResult(changed, added, removed)) ⇒
+    case Some(cr@CompareResult(changed, added, removed)) ⇒
 
       if (changed.nonEmpty) traverseChanged(changed)
       if (added.nonEmpty)   traverseAdded(added)
       if (removed.nonEmpty) traverseRemoved(removed)
 
-      println(s"Done.")
+      traverseEnded(cr)
 
     case None ⇒
       println(Yellow("No changes."))
