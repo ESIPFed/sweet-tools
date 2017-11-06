@@ -9,22 +9,27 @@ DO NOT commit the `local.cor.conf` file.
 
 **Running**
 
-Initially, capture the state of the files from both places
-(COR and Github) by running:
+Initially, capture the state of the files from the COR:
 
     ./watchdog.sc refreshCorInfo
-    ./watchdog.sc refreshGithubInfo
 
-Just to see a report about any changed, new, or removed files
-(and based on the currently captured information):
+Thi state is basically is a checksum (SHA-256) of the latest version of
+each SWEET ontology file.
+
+Just to see a report about any changed, new, or removed files at Github
+wrt the currently captured information from COR:
    
     ./watchdog.sc compare
 
-To actually process the updates and reflect them into the COR:
+To actually reflect any updates in the COR:
 
-    ./watchdog.sc run
+    ./watchdog.sc update
 
-This ios already functional (see initial output 
-[here](https://gist.github.com/carueda/a2b781d653651c4ddec4b83c73e5cdb4)).
+Example output
+[here](https://gist.github.com/carueda/a2b781d653651c4ddec4b83c73e5cdb4).
 
-TODO: set cronjob or webhook to trigger this.
+TODO: 
+- set cronjob or webhook to trigger the update
+- capture git commit message as log for ontology registration
+- as a possible logic variation, capture latest commit from Github and 
+  use this as a basis to detect changes there

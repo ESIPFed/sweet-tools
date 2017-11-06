@@ -41,23 +41,18 @@ def refreshCorInfo(): Unit = {
 }
 
 @main
-def refreshGithubInfo(): Unit = {
-  saveInfo(getGithubInfo, gitPath, gitPathBak)
-}
-
-@main
 def compare(): Unit = {
+  val gitInfo = refreshGithubInfo()
   val corClient = new CorClient(getConfig(corConfFile))
   val corInfo = loadInfo(corPath)
-  val gitInfo = loadInfo(gitPath)
   traverse(corClient, corInfo, gitInfo)()
 }
 
 @main
-def run(): Unit = {
+def update(): Unit = {
+  var gitInfo = refreshGithubInfo()
   val corClient = new CorClient(getConfig(corConfFile))
   var corInfo = loadInfo(corPath)
-  var gitInfo = loadInfo(gitPath)
   traverse(corClient, corInfo, gitInfo)(
     handleChanged = register(brandNew = false),
     handleAdded   = register(brandNew = true),
@@ -78,6 +73,10 @@ def run(): Unit = {
   println("Updating local info...")
   saveInfo(corInfo, corPath, corPathBak)
   saveInfo(gitInfo, gitPath, gitPathBak)
+}
+
+def refreshGithubInfo(): Map[String, Sha256] = {
+  saveInfo(getGithubInfo, gitPath, gitPathBak)
 }
 
 def traverse(corClient: CorClient, corInfo: Map[String, Sha256], gitInfo: Map[String, Sha256])
@@ -133,13 +132,17 @@ def getCorInfo(corClient: CorClient): Map[String, Sha256] = {
 }
 
 def getGithubInfo: Map[String, Sha256] = {
-  println("Getting Github info...")
-  (Github.listPaths map { path ⇒
+  print("Getting Github info: ")
+  Console.out.flush()
+  val elements = Github.listPaths map { path ⇒
     val iri = "http://sweetontology.net/" + path.replaceFirst("\\.ttl$", "")
-    println("\t" + iri)
+    print(".")
+    Console.out.flush()
     val contents = Github.getFile(path)
     iri → sha256(contents)
-  }).toMap
+  }
+  println(s"\n(${elements.length} paths retrieved)")
+  elements.toMap
 }
 
 def saveInfo(info: Map[String, Sha256], path: Path, bak: Path): Map[String, Sha256] = {
