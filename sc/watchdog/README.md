@@ -13,7 +13,7 @@ Initially, capture the state of the files from the COR:
 
     ./watchdog.sc refreshCorInfo
 
-Thi state is basically is a checksum (SHA-256) of the latest version of
+This state is basically a checksum (SHA-256) of the latest version of
 each SWEET ontology file.
 
 Just to see a report about any changed, new, or removed files at Github
@@ -29,7 +29,7 @@ Example output
 [here](https://gist.github.com/carueda/a2b781d653651c4ddec4b83c73e5cdb4).
 
 TODO: 
-- set cronjob or webhook to trigger the update
+- consider using a webhook to trigger the update (instead of cronjob)
 - capture git commit message as log for ontology registration
 - as a possible logic variation, capture latest commit from Github and 
   use this as a basis to detect changes there
