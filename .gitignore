@@ -1,3 +1,7 @@
 local.cor.conf
 watchdog.cronjob.out
 downloaded
+sweet-alignment-manager/AML-Jar
+sweet-alignment-manager/sweet
+sweet-alignment-manager/target/*
+sweet-alignment-manager/alignments/*
