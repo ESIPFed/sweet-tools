@@ -1,0 +1,1375 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>http://sweetontology.net/sweetAll</onto1>
+	<onto2>http://reference.data.gov.au/def/datasetOntology#</onto2>
+	<uri1>http://sweetontology.net/sweetAll</uri1>
+	<uri2>http://reference.data.gov.au/def/datasetOntology#</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaTime/dayOfYear"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#dayOfYear"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSci/hasSource"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasSource"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/wasDerivedFrom"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/rela/hasRole"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasRole"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/wasGeneratedBy"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaTime/hasTime"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#hasTime"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/used"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#used"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaTime/hasDuration"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#hasDuration"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSci/relatedTo"/>
+			<entity2 rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSpace/inside"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#inside"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMathFunction/BSpline"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#BSpline"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Circle"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Circle"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Policy"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Policy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciModel/Parcel"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Parcel"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry3D/Shell"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Shell"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propCategorical/Name"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Name"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Internet"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Internet"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry3D/Cylinder"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Cylinder"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataServiceAnalysis/Classifier"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#Classifier"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry3D/Sphere"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Sphere"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Rectangle"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Rectangle"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Car"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Car"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Line"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Line"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.989</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propTime/TimePeriod"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9887</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciComponent/Resource"/>
+			<entity2 rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.988</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Communication"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Communication"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9857</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propCategorical/Group"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Group"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9857</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMathFunction/CubicSpline"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#CubicSpline"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9846</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Jurisdiction"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Jurisdiction"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9806</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry3D/Ring"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Ring"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realm/Ring"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Ring"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propTime/DurationDescription"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/prop/Role"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#Role"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/prop/Role"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Role"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmGeolOrogen/Arc"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Arc"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Arc"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Arc"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMathGraph/Arc"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Arc"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataProduct/Dataset"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataProduct/Dataset"/>
+			<entity2 rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataProduct/Dataset"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#Dataset"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Standard"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Standard"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciProvenance/Agent"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Agent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciProvenance/Agent"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciProvenance/Agent"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Agent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propTimeFrequency/Frequency"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Frequency"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMath/Collection"/>
+			<entity2 rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMath/Collection"/>
+			<entity2 rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMath/Collection"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenSystem/Collection"/>
+			<entity2 rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenSystem/Collection"/>
+			<entity2 rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenSystem/Collection"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataProduct/Collection"/>
+			<entity2 rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataProduct/Collection"/>
+			<entity2 rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataProduct/Collection"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprTime/Duration"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#Duration"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propTime/Duration"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#Duration"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceLocation/Location"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Location"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceLocation/Location"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Location"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceLocation/Location"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Location"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry3D/Cone"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Cone"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Surface"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Surface"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Surface"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Surface"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propEnergy/Work"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/human/Work"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Curve"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Curve"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Curve"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Curve"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataModel/Cell"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Cell"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenFluidDynamics/Cell"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Cell"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Federal"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#Federal"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Polygon"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Polygon"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Polygon"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#Polygon"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Polygon"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Polygon"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprTime/TimeZone"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#TimeZone"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrBiomass/Feed"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/dcat#Feed"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMath/Point"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMath/Point"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMath/Point"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataModel/Point"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataModel/Point"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataModel/Point"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Point"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Point"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Point"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/relation"/>
+			<entity2 rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9375</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propTime/TimeInterval"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#Timelnterval"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Phone"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMathFunction/Function"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#AGIFTFunction"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/wasEncodedBy"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#wasEndedBy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9222</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaTime/hasFrequency"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#hasUpdateFrequency"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9142</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSci/hasPrefix"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasHonorificPrefix"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.888</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/wasPerformedBy"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#wasInformedBy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8799</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSpace/overlaps"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/geosparql#sfOverlaps"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8668</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/rela/contains"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/geosparql#ehContains"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8668</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaTime/hasEnd"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasGender"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8633</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSci/hasUnit"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasOrganizationUnit"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8632</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/equals"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/geosparql#ehEquals"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8559</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasDimension"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/geosparql#dimension"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.855</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/wasGeneratedAt"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#generated"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.855</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSpace/hasLocation"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#atLocation"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.846</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasInterval"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#intervalIn"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.846</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaTime/hasStart"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/hasPart"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8392</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSci/greaterRoleThan"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#roleOf"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8182</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSpace/hasBoundary"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasSound"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8094</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/wasOperatedBy"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#wasStartedBy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7946</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMathFunction/Cubic"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/gml#PolynomialSpline"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7877</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaHuman/hasAttribute"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7855</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaTime/hasAverageDuration"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#hasTemporalDuration"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7577</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasRepresentation"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasRegion"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7566</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/hasGenesis"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasGeo"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7537</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/rela/hasState"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasRelated"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7531</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasField"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasFN"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7467</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSpace/hasGeometricalObject"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7392</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasScale"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasLocality"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7327</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSci/hasQuantity"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasTitle"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7327</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSci/hasInterval"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasValue"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7327</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaTime/temporalPartOf"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#inTemporalPosition"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7309</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSpace/hasNormal"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasNote"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7272</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasTest"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#hasTRS"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7218</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSci/hasImpactOn"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#hasContact"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7204</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSpace/hasCenter"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#hasLicense"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7204</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSpace/hasSpatialDistribution"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.72</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasConstant"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasInstantMessage"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7072</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaTime/start"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#qualifiedStart"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6975</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/wasTriggeredBy"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6943</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/rela/hasProcess"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasAddress"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6931</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaHuman/hasHumanActivity"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#activity"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6877</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSpace/inSH"/>
+			<entity2 rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6864</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasCondition"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasAdditionalName"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6746</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/hasDataModel"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#hasDataset"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6741</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/wasControlledBy"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#wasInvalidatedBy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6705</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasAverage"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasLanguage"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.67</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasCoordinates"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasCategory"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6618</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaChemical/hasMedium"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#hasMember"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.661</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaTime/hasEndTime"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#hasDateTimeDescription"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6552</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasEdge"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasEmail"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6524</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSpace/hasDepth"/>
+			<entity2 rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6514</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSci/hasGeologicProvince"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasLogo"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6402</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaTime/end"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#qualifiedEnd"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6356</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasArc"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasUID"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6349</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/rela/partOf"/>
+			<entity2 rdf:resource="http://reference.data.gov.au/def/datasetOntology#participatesIn"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.63</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/rela/hasPhenomena"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasPhoto"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6292</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaTime/hasNHTime"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasName"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.627</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasExponent"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6251</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSpace/spatialRelation"/>
+			<entity2 rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.625</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaPhysical/hasOscillationDirection"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#hasDurationDescription"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6161</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSci/containsMaterial"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#intervalContains"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6134</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/hadProcess"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#hadPlan"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6056</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceLocation/Position"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/time#TimePosition"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6045</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSpace/hasArea"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasKey"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6012</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaSci/hasRock"/>
+			<entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#hasURL"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6012</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaChemical/hasChemicalRole"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#hadRole"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

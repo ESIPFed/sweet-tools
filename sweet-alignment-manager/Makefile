@@ -10,7 +10,7 @@ CAT = $(SWEET_REPO)/src/catalog-v001.xml
 SRC = $(SWEET_REPO)/src/sweetAll.ttl
 AML_JAR = AML-Jar
 TARGET = target
-ONTS = instruments platforms sciencekeywords
+ONTS = datasetontology prov-o sosa ssn
 
 VERBOSE = -v
 

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>11</type>
+	<onto1>http://sweetontology.net/sweetAll</onto1>
+	<onto2>http://www.w3.org/ns/sosa/</onto2>
+	<uri1>http://sweetontology.net/sweetAll</uri1>
+	<uri2>http://www.w3.org/ns/sosa/</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciProvenance/Agent"/>
+			<entity2 rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanResearch/Observation"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMathStatistics/Sampling"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanResearch/Result"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanResearch/Sample"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9857</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrFacility/Platform"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.983</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaProvenance/used"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.78</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/rela/hasProperty"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/sosa/actsOnProperty"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7714</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/rela/hasRealm"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6907</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/times"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/sosa/phenomenonTime"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6667</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/hasTest"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6487</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/relaMath/isDerivativeOf"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/sosa/isSampleOf"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6425</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>
