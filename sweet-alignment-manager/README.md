@@ -34,6 +34,10 @@ On subsequent runs, you do not need `make setup`. This clones [SWEET](https://gi
 By default, the pipeline WILL fail in its entirety, this is OK. 
 If you have configured the pipeline correctly, the preliminary alignment outputs will be available in the **alignments** directory. They are written as and RDF graph.
 
+## AML GUI
+
+You can run the AML GUI by simply double-clicking the file  AgreementMakerLight.jar or through the command line, by typing ```java -jar AgreementMakerLight.jar``` without any arguments. The desktop application is pretty self explanitory. Essentially it involves loading a source and target ontology and running a matching operation. The really nice feature provided by the Desktop application however, is that you can graphically see alignments and the logic behind the decision. You can also intervene in alignment results, possibly correcting them and hence generating a more accurate overal alignment.
+
 ## Acknowledgements
 
 SAM uses The AgreementMakerLight ontology matching system, for more information see
@@ -42,6 +46,5 @@ SAM uses The AgreementMakerLight ontology matching system, for more information 
 
 ## License
 
-SWEET Alignment Manager is licensed permissively under the [Apache License v2.0](https://www.apache.org/licenses/LICENSE-2.0)
-a copy of which ships with this source code.
+SWEET Alignment Manager is licensed permissively under the [Apache License v2.0](https://www.apache.org/licenses/LICENSE-2.0) a copy of which ships with this source code.
 
