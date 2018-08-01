@@ -50,6 +50,7 @@ def compare(): Unit = {
 
 @main
 def update(): Unit = {
+  println("watchdog update starting " + new java.util.Date())
   var gitInfo = refreshGithubInfo()
   val corClient = new CorClient(getConfig(corConfFile))
   var corInfo = loadInfo(corPath)
