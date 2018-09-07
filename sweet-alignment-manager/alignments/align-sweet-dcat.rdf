@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>http://sweetontology.net/sweetAll</onto1>
+	<onto2>http://www.w3.org/ns/dcat</onto2>
+	<uri1>http://sweetontology.net/sweetAll</uri1>
+	<uri2>http://www.w3.org/ns/dcat</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Policy"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Policy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataProduct/Dataset"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/human/Service"/>
+			<entity2 rdf:resource="http://purl.org/dc/dcmitype/Service"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataService/DiscoveryService"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/dcat#DiscoveryService"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9868</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Communication"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Communication"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9857</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataService/DataService"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.985</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Jurisdiction"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Jurisdiction"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9837</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Standard"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Standard"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciProvenance/Agent"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Agent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciProvenance/Agent"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propTimeFrequency/Frequency"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Frequency"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciComponent/Resource"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciComponent/Resource"/>
+			<entity2 rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMath/Collection"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMath/Collection"/>
+			<entity2 rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenSystem/Collection"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenSystem/Collection"/>
+			<entity2 rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataProduct/Collection"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataProduct/Collection"/>
+			<entity2 rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/prop/Role"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Role"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceLocation/Location"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Location"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceLocation/Location"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Location"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propTime/TimePeriod"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9689</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>
