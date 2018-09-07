@@ -8,9 +8,9 @@
 SWEET_REPO = sweet
 CAT = $(SWEET_REPO)/src/catalog-v001.xml
 SRC = $(SWEET_REPO)/src/sweetAll.ttl
-AML_JAR = AML-Jar
+AML_JAR = AML_v3.1
 TARGET = target
-ONTS = datasetontology prov-o sosa ssn
+ONTS = dcat
 
 VERBOSE = -v
 
@@ -18,7 +18,7 @@ VERBOSE = -v
 # TOP LEVEL TARGET
 # ----------------------------------------
 all: align_all
-setup: sweet aml
+setup: sweet aml align_all
 clean:
 	rm alignments/*
 
@@ -29,7 +29,7 @@ sweet:
 
 # clone AgreementMakerLight/AML-Jar into this repo
 aml:
-	git clone https://github.com/AgreementMakerLight/AML-Jar.git 
+	curl -LO https://github.com/AgreementMakerLight/AML-Project/releases/download/v3.1/AML_v3.1.zip && unzip AML_v3.1.zip
 
 # ----------------------------------------
 # Alignment
