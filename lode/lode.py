@@ -20,8 +20,9 @@ except OSError as e:
     if e.errno != errno.EEXIST:
         raise
 
+print("Processing sweetAll")
 r = requests.get("http://www.essepuntato.it/lode/owlapi/http://cor.esipfed.org/ont/api/v0/ont%3Firi=http://sweetontology.net/sweetAll")
-sweet_all_html = BeautifulSoup(r.content)
+sweet_all_html = BeautifulSoup(r.content, features="html5lib")
 
 lode_urls = []
 for link in sweet_all_html.find_all('a'):
@@ -40,6 +41,7 @@ with open('sweet_lode/sweetAll.html', 'w') as f:
     f.close()
 
 for url in lode_urls:
+    print("Processing %s" % str(url))
     html = requests.get(str(url))
     with open('sweet_lode/' + url.rsplit('/', 1)[-1] + '.html', 'w') as f:
         f.write(str(html.html))
