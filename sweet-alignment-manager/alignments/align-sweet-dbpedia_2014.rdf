@@ -1,0 +1,1213 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>http://sweetontology.net/sweetAll</onto1>
+	<onto2>http://dbpedia.org/ontology/</onto2>
+	<uri1>http://sweetontology.net/sweetAll</uri1>
+	<uri2>http://dbpedia.org/ontology/</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrAnimal/Crustacean"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Crustacean"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmHydroBody/Dam"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Dam"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprTimeDay/Day"/>
+			<entity2 rdf:resource="http://dbpedia.org/datatype/day"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrPlant/Fern"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Fern"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmAstroBody/Asteroid"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Asteroid"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrAnimal/Arachnid"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Arachnid"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/stateRoleBiological/Producer"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Producer"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmGeolConstituent/Vein"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Vein"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Rocket"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Rocket"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrPlant/Conifer"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Conifer"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry3D/Polyhedron"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Polyhedron"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrMicrobiota/Bacteria"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Bacteria"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Aircraft"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Aircraft"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Infrastructure"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Infrastructure"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataProduct/Archive"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Archive"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandCoastal/Atoll"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Atoll"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmAstroBody/Planet"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Planet"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataFormat/File"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/File"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrAnimal/Reptile"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Reptile"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmAstroBody/Galaxy"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Galaxy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/human/Profession"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Profession"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenBiol/Death"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Death"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrAnimal/Amphibian"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Amphibian"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrAnimal/Insect"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Insect"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Ship"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Ship"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Spacecraft"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Spacecraft"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propCategorical/Community"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Community"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9899</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Family"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Family"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9899</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenBiol/Birth"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Birth"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9899</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Province"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Province"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9897</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/SpaceShuttle"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/SpaceShuttle"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9891</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrPlant/FloweringPlant"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/FloweringPlant"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9888</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Region"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Region"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9887</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceLocation/Location"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/d0.owl#Location"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9884</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrAnimal/Bird"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Bird"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Swarm"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Swarm"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrAnimal/Mammal"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Mammal"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrInstrument/Device"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Device"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrBiomass/Organism"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organism"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrInstrument/Instrument"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Instrument"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenBiol/Disease"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Disease"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceHeight/Altitude"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Altitude"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propCount/Population"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Population"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrAnimal/Fish"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Fish"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propCategorical/Description"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandFluvial/Cave"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Cave"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanResearch/Project"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Project"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9875</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpace/Configuration"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Configuration"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9875</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propCategorical/Name"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Name"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9875</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrPlant/Moss"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Moss"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9875</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/River"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9875</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceMultidimensional/Area"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Area"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9874</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrPlant/Plant"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Plant"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9874</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandform/Crater"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Crater"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9861</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propCategorical/Type"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Type"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9858</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandCoastal/Island"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Island"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9857</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrBiomass/Food"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Food"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9857</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrMineral/Mineral"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Mineral"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9857</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataProduct/Image"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Image"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9834</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmHydroBody/Lake"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Lake"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9832</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandAeolian/Desert"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Desert"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9829</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrAnimal/Animal"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Animal"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9829</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Military"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/MilitaryStructure"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9829</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matr/ChemicalSubstance"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9814</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/AdministrativeRegion"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/AdministrativeRegion"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9807</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/prop/Role"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrIndustrial/Product"/>
+			<entity2 rdf:resource="http://schema.org/Product"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMathOperation/Product"/>
+			<entity2 rdf:resource="http://schema.org/Product"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandOrographic/Mountain"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Mountain"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandOrographic/Mountain"/>
+			<entity2 rdf:resource="http://schema.org/Mountain"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/State"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/State"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/state/State"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/State"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrCompound/ChemicalCompound"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandProtected/Park"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Park"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandProtected/Park"/>
+			<entity2 rdf:resource="http://schema.org/Park"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandVolcanic/Volcano"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Volcano"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propTime/TimeInterval"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmHydroBody/Stream"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Stream"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propOrdinal/Quality"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Star"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Star"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmAstroBody/Star"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Star"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciProvenance/Agent"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Agent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciProvenance/Agent"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propEnergy/Work"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Work"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/human/Work"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Work"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmAstroBody/Satellite"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Satellite"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Satellite"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Satellite"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrBiomass/Species"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Species"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandform/Continent"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Continent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandform/Continent"/>
+			<entity2 rdf:resource="http://schema.org/Continent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Continent"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Continent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Continent"/>
+			<entity2 rdf:resource="http://schema.org/Continent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmHydroBody/BodyOfWater"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/BodyOfWater"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmHydroBody/BodyOfWater"/>
+			<entity2 rdf:resource="http://schema.org/BodyOfWater"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Country"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Country"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/Country"/>
+			<entity2 rdf:resource="http://schema.org/Country"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandOrographic/MountainRange"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/MountainRange"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenEcology/Competition"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Competition"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceHeight/Depth"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Depth"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenWave/Sound"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Sound"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmHydroBody/Sound"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Sound"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrFacility/Station"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Station"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrElement/ChemicalElement"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/ChemicalElement"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propTime/TimePeriod"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/TimePeriod"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmHydroBody/Canal"/>
+			<entity2 rdf:resource="http://schema.org/Canal"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmHydroBody/Canal"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Canal"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Square"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Square"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMathOperation/Square"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Square"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataServiceAnalysis/Train"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Train"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Train"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Train"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandFluvial/Valley"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Valley"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMath/Collection"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenSystem/Collection"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataProduct/Collection"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phen/Event"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Event"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phen/Event"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phen/Event"/>
+			<entity2 rdf:resource="http://schema.org/Event"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrFacility/Building"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Building"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrFacility/Airport"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Airport"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrFacility/Airport"/>
+			<entity2 rdf:resource="http://schema.org/Airport"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/City"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/City"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanJurisdiction/City"/>
+			<entity2 rdf:resource="http://schema.org/City"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandFluvial/Tunnel"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Tunnel"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realm/Ocean"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Ocean"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmCryo/Glacier"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Glacier"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMathFunctionOrthogonal/Mode"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Fashion"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9115</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propFunction/Mode"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Fashion"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9115</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrPlant/Fungi"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Fungus"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.891</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Route"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Road"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8712</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEnergy/PowerPlant"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/PowerStation"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8316</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmLandProtected/MarineProtectedArea"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/ProtectedArea"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7003</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrAnimal/Mollusk"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Mollusca"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6523</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenWave/KelvinWave"/>
+			<entity2 rdf:resource="http://dbpedia.org/datatype/kelvin"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6223</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>
