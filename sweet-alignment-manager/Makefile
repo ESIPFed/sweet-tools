@@ -10,7 +10,7 @@ CAT = $(SWEET_REPO)/src/catalog-v001.xml
 SRC = $(SWEET_REPO)/src/sweetAll.ttl
 AML_JAR = AML_v3.1
 TARGET = target
-ONTS = dcat
+ONTS = premis3
 
 VERBOSE = -v
 
@@ -38,4 +38,4 @@ aml:
 align_all: $(patsubst %,%,$(ONTS))
 
 %:
-	java -jar ${AML_JAR}/AgreementMakerLight.jar -s ${SRC} -t ${TARGET}/$@.ttl -o alignments/align-sweet-$@.rdf -a
+	java -jar ${AML_JAR}/AgreementMakerLight.jar -s ${SRC} -t ${TARGET}/$@.owl -o alignments/align-sweet-$@.rdf -a
