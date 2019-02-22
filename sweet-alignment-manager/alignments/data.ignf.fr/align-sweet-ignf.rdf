@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>11</type>
+	<onto1>http://sweetontology.net/sweetAll</onto1>
+	<onto2>http://data.ign.fr/def/ignf</onto2>
+	<uri1>http://sweetontology.net/sweetAll</uri1>
+	<uri2>http://data.ign.fr/def/ignf</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceCoordinate/PrimeMeridian"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/ignf#PrimeMeridian"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9892</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry3D/Ellipsoid"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/ignf#Ellipsoid"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenSystemComplexity/Transformation"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/ignf#Transformation"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/prop/Role"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/org#Role"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/phenSystem/Conversion"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/ignf#Conversion"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/repr/CoordinateSystem"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/ignf#CoordinateSystem"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceDirection/Axis"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/ignf#CoordinateSystemAxis"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceReferenceSystem/VerticalCoordinateSystem"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/ignf#VerticalCS"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMathOperation/Operation"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/ignf#CoordinateOperation"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6068</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

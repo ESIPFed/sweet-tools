@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>http://sweetontology.net/sweetAll</onto1>
+	<onto2>http://data.ign.fr/def/topo#</onto2>
+	<uri1>http://sweetontology.net/sweetAll</uri1>
+	<uri2>http://data.ign.fr/def/topo#</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Curve"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/geometrie#Curve"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Route"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Route"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/prop/Role"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/org#Role"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanCommerce/Construction"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Construction"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmHydroBody/Reservoir"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Reservoir"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciComponent/Reservoir"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Reservoir"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrFacility/Building"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Batiment"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciProvenance/Pipeline"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Conduite"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Pipeline"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Conduite"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmGeolBasin/Basin"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Bassin"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmHydroBody/Basin"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Bassin"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Square"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Place"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMathOperation/Square"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Place"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propMass/Structure"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Construction"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrFacility/Structure"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Construction"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataModel/Structure"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#Construction"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/realmHydro/SurfaceWater"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/topo#SurfaceDEau"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7667</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

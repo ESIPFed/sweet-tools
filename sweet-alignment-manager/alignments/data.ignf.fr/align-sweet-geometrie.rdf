@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>http://sweetontology.net/sweetAll</onto1>
+	<onto2>http://data.ign.fr/def/geometrie</onto2>
+	<uri1>http://sweetontology.net/sweetAll</uri1>
+	<uri2>http://data.ign.fr/def/geometrie</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry3D/Envelope"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/geometrie#Envelope"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/prop/Role"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/org#Role"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Curve"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Curve"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Curve"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/geometrie#Curve"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Line"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Line"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Line"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/geometrie#Line"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataModel/Point"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataModel/Point"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/geometrie#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMath/Point"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMath/Point"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/geometrie#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Point"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Point"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/geometrie#Point"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Surface"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/geometrie#Surface"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Surface"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Surface"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Polygon"/>
+			<entity2 rdf:resource="http://data.ign.fr/def/geometrie#Polygon"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSpaceGeometry/Polygon"/>
+			<entity2 rdf:resource="http://www.opengis.net/ont/sf#Polygon"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>
