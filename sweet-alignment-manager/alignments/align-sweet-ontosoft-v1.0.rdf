@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>11</type>
+	<onto1>http://sweetontology.net/sweetAll</onto1>
+	<onto2>http://ontosoft.org/software</onto2>
+	<uri1>http://sweetontology.net/sweetAll</uri1>
+	<uri2>http://ontosoft.org/software</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciProvenance/Agent"/>
+			<entity2 rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propOrdinal/Trust"/>
+			<entity2 rdf:resource="http://ontosoft.org/softwareCategories#Trust"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataService/Access"/>
+			<entity2 rdf:resource="http://ontosoft.org/softwareCategories#Access"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propChemical/Composition"/>
+			<entity2 rdf:resource="http://ontosoft.org/software#Composition"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanResearch/Experiment"/>
+			<entity2 rdf:resource="http://ontosoft.org/softwareCategories#Experiment"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9883</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceLocation/Location"/>
+			<entity2 rdf:resource="http://ontosoft.org/software#Location"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9857</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/humanResearch/Research"/>
+			<entity2 rdf:resource="http://ontosoft.org/softwareCategories#Research"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataModel/Parameter"/>
+			<entity2 rdf:resource="http://purl.org/dc/terms/Parameter"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprDataFormat/File"/>
+			<entity2 rdf:resource="http://ontosoft.org/software#FileIO"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6776</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/repr/Measurement"/>
+			<entity2 rdf:resource="http://ontosoft.org/software#MeasurementEntity"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6224</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/stateSystem/Complex"/>
+			<entity2 rdf:resource="http://ontosoft.org/software#ComplexEntity"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6055</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

@@ -32,7 +32,7 @@ On subsequent runs, you do not need `make setup`. This clones [SWEET](https://gi
 ## Results
 
 By default, the pipeline WILL fail in its entirety, this is OK. 
-If you have configured the pipeline correctly, the preliminary alignment outputs will be available in the **alignments** directory. They are written as and RDF graph.
+If you have configured the pipeline correctly, the preliminary alignment outputs will be available in the **alignments** directory. They are written as individual RDF graph(s).
 
 ## AML GUI
 
