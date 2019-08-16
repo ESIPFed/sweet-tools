@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>http://sweetontology.net/sweetAll</onto1>
+	<onto2>https://data.nasa.gov/ontologies/atmonto/acInst</onto2>
+	<uri1>http://sweetontology.net/sweetAll</uri1>
+	<uri2>https://data.nasa.gov/ontologies/atmonto/acInst</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propSpaceLocation/Location"/>
+			<entity2 rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Location"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9895</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propTime/TimeInterval"/>
+			<entity2 rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#TimeInterval"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/matrEquipment/Aircraft"/>
+			<entity2 rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprMath/Sequence"/>
+			<entity2 rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciProvenance/Sequence"/>
+			<entity2 rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/propCategorical/Type"/>
+			<entity2 rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6474</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://sweetontology.net/reprSciModel/Model"/>
+			<entity2 rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftModel"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6397</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>
