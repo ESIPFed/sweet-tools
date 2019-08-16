@@ -26,6 +26,5 @@ def sha256(bytes: Array[Byte]): String = {
 
 def error(str: String): Nothing = {
   Console.err.println(Red(s"error: $str"))
-  System.exit(1)
   throw new RuntimeException
 }

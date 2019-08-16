@@ -63,7 +63,14 @@ def update(): Unit = {
 
   def register(brandNew: Boolean)(iri: String): Unit = {
     val sweetContents = Github.getSweet(iri)
-    corClient.register(iri, sweetContents, brandNew)
+    try corClient.register(iri, sweetContents, brandNew)
+    catch {
+      case NonFatal(e) ⇒
+        println(s"Exception in register: brandNew=$brandNew  iri=$iri")
+        e.printStackTrace()
+        // but still let the updates below be performed
+        println(s"NOTE: continuing...")
+    }
     corInfo = corInfo.updated(iri, sha256(sweetContents))
     gitInfo = gitInfo.updated(iri, sha256(sweetContents))
   }

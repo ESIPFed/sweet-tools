@@ -24,6 +24,13 @@ wrt the currently captured information from COR:
 To actually reflect any updates in the COR:
 
     ./watchdog.sc update
+    
+NOTE: any error during a registration is just printed out but the process
+is let to continue, in particular this means that the set of SHA-256
+checksums will still be updated so the same registrations are not 
+reattempted in a next run.  This logic is of course not very elegant/robust
+but the case we want to handle at the moment is failures while updating 
+the triple store, not error in the ontology registration itself.
 
 Example output
 [here](https://gist.github.com/carueda/a2b781d653651c4ddec4b83c73e5cdb4).

@@ -111,7 +111,7 @@ class CorClient(config: Config) {
     val bytes = sweetContents.getBytes(StandardCharsets.UTF_8)
 
     val response: HttpResponse[String] = Http(route)
-      .timeout(connTimeoutMs = 5 * 1000, readTimeoutMs = 60 * 1000)
+      .timeout(connTimeoutMs = 5*1000, readTimeoutMs = 3*60*1000)
       .postMulti(MultiPart("file", "filename", "text/plain", bytes))
       .auth(userName, userPass)
       .asString
@@ -142,7 +142,7 @@ class CorClient(config: Config) {
     if (brandNew) {
       println(s"\t\t- registering brand new iri=$iri")
       val response: HttpResponse[String] = Http(route)
-        .timeout(connTimeoutMs = 5*1000, readTimeoutMs = 60*1000)
+        .timeout(connTimeoutMs = 5*1000, readTimeoutMs = 3*60*1000)
         .postForm(params)
         .auth(userName, userPass)
         .asString
@@ -161,7 +161,7 @@ class CorClient(config: Config) {
       println(s"\t\t- registering new revision of iri=$iri")
       val data = writePretty(params.toMap)
       val response: HttpResponse[String] = Http(route)
-        .timeout(connTimeoutMs = 5*1000, readTimeoutMs = 60*1000)
+        .timeout(connTimeoutMs = 5*1000, readTimeoutMs = 3*60*1000)
         .auth(userName, userPass)
         .postData(data)
         .header("Content-type", "application/json")
