@@ -65,7 +65,7 @@ def update(): Unit = {
     val sweetContents = Github.getSweet(iri)
     try corClient.register(iri, sweetContents, brandNew)
     catch {
-      case NonFatal(e) ⇒
+      case scala.util.control.NonFatal(e) ⇒
         println(s"Exception in register: brandNew=$brandNew  iri=$iri")
         e.printStackTrace()
         // but still let the updates below be performed
