@@ -115,6 +115,7 @@ class CorClient(config: Config) {
       .header("User-Agent", "WatchdogCorClient/1")
       .timeout(connTimeoutMs = 5*1000, readTimeoutMs = 3*60*1000)
       .postMulti(MultiPart("file", "filename", "text/plain", bytes))
+      .param("format", "ttl")
       .auth(userName, userPass)
       .asString
 
@@ -130,6 +131,7 @@ class CorClient(config: Config) {
 
     val params = List[(String, String)](
       "iri" → iri,
+      "format" → "ttl",
       "name" → name,
       "userName" → userName,
       "orgName" → orgName,
