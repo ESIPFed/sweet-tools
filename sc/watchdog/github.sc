@@ -18,8 +18,12 @@ object Github {
 
   def listPaths: Seq[String] = {
     val body = Http(s"https://api.github.com/repos/ESIPFed/sweet/contents/src").asString.body
+    val bodyAlign = Http(s"https://api.github.com/repos/ESIPFed/sweet/contents/alignments").asString.body
     val items = parse(body).extract[Seq[GithubFileInfo]]
+    val itemsAlign = parse(bodyAlign).extract[Seq[GithubFileInfo]]
     items.filter(_.path.endsWith(".ttl")).map(_.path.substring("src/".length))
+    itemsAlign.filter(_.path.endsWith(".ttl")).map(_.path.substring("alignments/".length))
+    items ++= itemsAlign
   }
 
   def getSweet(iri: String): String = {
@@ -33,7 +37,12 @@ object Github {
   }
 
   def getFile(ttlName: String): String = {
+  	val url = null
+    if(ttlName.contains("mapping")){
+      val url = s"https://raw.githubusercontent.com/ESIPFed/sweet/master/alignments/$ttlName"
+    } else{
     val url = s"https://raw.githubusercontent.com/ESIPFed/sweet/master/src/$ttlName"
+    }
     val response: HttpResponse[String] = Http(url)
       .option(HttpOptions.followRedirects(true))
       .asString
