@@ -17,13 +17,15 @@ object Github {
   implicit val jsonFormats = DefaultFormats
 
   def listPaths: Seq[String] = {
-    val body = Http(s"https://api.github.com/repos/ESIPFed/sweet/contents/src").asString.body
-    val bodyAlign = Http(s"https://api.github.com/repos/ESIPFed/sweet/contents/alignments").asString.body
+    List("src", "alignments")
+      .flatMap(listPaths)
+  }
+
+  // the resulting paths will include the parentDir/ prefix
+  private def listPaths(parentDir: String): Seq[String] = {
+    val body = Http(s"https://api.github.com/repos/ESIPFed/sweet/contents/$parentDir").asString.body
     val items = parse(body).extract[Seq[GithubFileInfo]]
-    val itemsAlign = parse(bodyAlign).extract[Seq[GithubFileInfo]]
-    items.filter(_.path.endsWith(".ttl")).map(_.path.substring("src/".length))
-    itemsAlign.filter(_.path.endsWith(".ttl")).map(_.path.substring("alignments/".length))
-    items ++= itemsAlign
+    items.filter(_.path.endsWith(".ttl")).map(_.path)
   }
 
   def getSweet(iri: String): String = {
@@ -36,13 +38,11 @@ object Github {
     getSweet(iri).getBytes(StandardCharsets.UTF_8)
   }
 
+  // ttlName assumed to include the parentDir,
+  // eg., "src/..." or "alignments/..."
   def getFile(ttlName: String): String = {
-  	val url = null
-    if(ttlName.contains("mapping")){
-      val url = s"https://raw.githubusercontent.com/ESIPFed/sweet/master/alignments/$ttlName"
-    } else{
-    val url = s"https://raw.githubusercontent.com/ESIPFed/sweet/master/src/$ttlName"
-    }
+    assert(ttlName.contains("/"))
+    val url = s"https://raw.githubusercontent.com/ESIPFed/sweet/master/$ttlName"
     val response: HttpResponse[String] = Http(url)
       .option(HttpOptions.followRedirects(true))
       .asString
