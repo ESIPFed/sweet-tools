@@ -29,7 +29,17 @@ object Github {
   }
 
   def getSweet(iri: String): String = {
-    val ttlName = iri.substring("http://sweetontology.net/".length) + ".ttl"
+    // TODO improve decision logic, which is pretty ad hoc at the moment.
+
+    val ttlName = {
+      if (iri == "http://sweetontology.net/alignment/ssn")
+        "alignments/sweet-ssn-mapping.ttl"
+      else if (iri == "http://sweetontology.net/alignment/dcat")
+        "alignments/sweet-dcat-mapping.ttl"
+
+      else
+        iri.substring("http://sweetontology.net/".length) + ".ttl"
+    }
     getFile(ttlName)
   }
 
@@ -41,7 +51,7 @@ object Github {
   // ttlName assumed to include the parentDir,
   // eg., "src/..." or "alignments/..."
   def getFile(ttlName: String): String = {
-    assert(ttlName.contains("/"))
+    assert(ttlName.contains("/"), s"getFile: ttlName='$ttlName'")
     val url = s"https://raw.githubusercontent.com/ESIPFed/sweet/master/$ttlName"
     val response: HttpResponse[String] = Http(url)
       .option(HttpOptions.followRedirects(true))
