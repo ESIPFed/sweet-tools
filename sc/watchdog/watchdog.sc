@@ -149,7 +149,20 @@ def getGithubInfo: Map[String, Sha256] = {
   print("Getting Github info: ")
   Console.out.flush()
   val elements = Github.listPaths map { path ⇒
-    val iri = "http://sweetontology.net/" + path.replaceFirst("\\.ttl$", "")
+    val iri: String = {
+      if (path.startsWith("src/"))
+        s"http://sweetontology.net/" + path.substring("src/".length)
+
+      // TODO review/complement this as needed:
+      else if (path == "alignments/sweet-ssn-mapping.ttl")
+        "http://sweetontology.net/alignment/ssn"
+      else if (path == "alignments/sweet-dcat-mapping.ttl")
+        "http://sweetontology.net/alignment/dcat"
+
+      else
+        throw new RuntimeException(s"unexpected path: '$path'")
+    }.replaceFirst("\\.ttl$", "")
+
     print(".")
     Console.out.flush()
     val contents = Github.getFile(path)
