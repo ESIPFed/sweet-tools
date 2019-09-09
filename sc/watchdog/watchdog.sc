@@ -156,6 +156,8 @@ def getGithubInfo: Map[String, Sha256] = {
       // TODO review/complement this as needed:
       else if (path == "alignments/sweet-ssn-mapping.ttl")
         "http://sweetontology.net/alignment/ssn"
+      else if (path == "alignments/sweet-dcat-mapping.ttl")
+        "http://sweetontology.net/alignment/dcat"
 
       else
         throw new RuntimeException(s"unexpected path: '$path'")
