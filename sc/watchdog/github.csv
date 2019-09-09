@@ -9,7 +9,7 @@ http://sweetontology.net/humanEnvirControl         , 860a4ad44d69ae922c886c3f078
 http://sweetontology.net/humanEnvirStandards       , 88f2de1f40ce6e3185b86d1946914be0d7a8a69492bfcadd0da1f16124b183be
 http://sweetontology.net/humanJurisdiction         , 9d4075aa4d40af749c688ff7e8ea9256d4f1b63992c103f8882eb0d1f9a6952c
 http://sweetontology.net/humanKnowledgeDomain      , a22255fefe786a888aee2ea4ae26a7cce195115dd0b61f937e2812ff0b8b00ed
-http://sweetontology.net/humanResearch             , c87bde1eea2bb7e676dace8150cdebfc8760faa6078daf5891bb883cb2395c5c
+http://sweetontology.net/humanResearch             , c51ee944b19c0995f3bbaaec2018e39271a471ee4cd4a17ddeaf704cfc1d59b1
 http://sweetontology.net/humanTechReadiness        , bc51464e4d862746fdc84338088d665f9ae057c497084ba0caa0ddf4a95c45f7
 http://sweetontology.net/humanTransportation       , 583c853f6f84292d76bf2e51566fc970cac5050c0d52295307b82cbfda6f1b78
 http://sweetontology.net/matr                      , bec180c499ea0d9bee0ae1f4a1ec8290a0324b6bf36181762b18b38396ed7fde
@@ -27,7 +27,7 @@ http://sweetontology.net/matrInstrument            , b2bc6d0af1c94944168552f1d66
 http://sweetontology.net/matrIon                   , d6773004437cbbf94ae6a260fb1de922926cd02d8537cf5d604b728b12815af9
 http://sweetontology.net/matrIsotope               , 567bcf00570e53994f84fd8e8ab0ae3735d4043aedc5b64dfdf7de23c25047b9
 http://sweetontology.net/matrMicrobiota            , 9aa14b4504353150c3f987a2876665a5a6c5b95e0a73a0def6852d036e933eeb
-http://sweetontology.net/matrMineral               , 27fa26b300c24fe2112b82bf29d6358f26df6abcabc75bfb2372fdb0b3ce7c88
+http://sweetontology.net/matrMineral               , 1fb877a17600576a09cc28363eb5df0a63bfc342ed5356bae0e6cc9342484b5f
 http://sweetontology.net/matrNaturalResource       , 91c9436827fa593338860636b87654ce4052cee9c878c257a6d4fe658d92fd13
 http://sweetontology.net/matrOrganicCompound       , d45b8c9efcca48d4cee6a2192c0502737c960533c78dfd34685eff61f3f35bb0
 http://sweetontology.net/matrParticle              , a8eccb32ea3bd35870b6f040b645a84fcdb33689833e057f7706ead0676cc340
@@ -40,7 +40,7 @@ http://sweetontology.net/phen                      , 0b62a517d7c545134f39d6b0079
 http://sweetontology.net/phenAtmo                  , fbb304c60b21af56fd888c71e216fb1273c5e3040280ccb1558fbf7066fe5972
 http://sweetontology.net/phenAtmoCloud             , 1b2089c757407d7b3be33d9c5761abc3a6c134b8158e45ead9ef5ff83b09ec18
 http://sweetontology.net/phenAtmoFog               , f8959ba6c32a41a45d01d1f7eb3b69fc694e8338c8beae5a21123b8e4c244bb2
-http://sweetontology.net/phenAtmoFront             , 502d5dc342d422bc71988185674f1fefd6c6ad28f798106644237593bb6f2a11
+http://sweetontology.net/phenAtmoFront             , 7cccd80e823f6c41b72c2fd8802672c434da80c270466a12559fb2e139fb2c34
 http://sweetontology.net/phenAtmoLightning         , 957df18f0114a8afcbdbf97a91b724b7f69d02860341b173227dd11f7f5c0511
 http://sweetontology.net/phenAtmoPrecipitation     , 4492949921bcbb6e4976a97b4957edd23a638240f88a2a1caa1e6796e78ce1d3
 http://sweetontology.net/phenAtmoPressure          , 9128d13ad743a3cdac979114856d80193e842b2fdb029df1f4ede283d537cc2e
@@ -127,7 +127,7 @@ http://sweetontology.net/realmAtmoBoundaryLayer    , 68901ed9eb615239b131a03cfb0
 http://sweetontology.net/realmAtmoWeather          , c93478b15e61f492f1bfa92195b9a7f54a8f2dda9eb1eb08c570aa98f0e1319f
 http://sweetontology.net/realmBiolBiome            , 4a836e370b7faee8a158a9e5da7f5a7488d2d3cad5e85c148d5e0304e628540e
 http://sweetontology.net/realmClimateZone          , 73af1056eeb00cb12997c62073b4c5849119b7b4ce791e96ff33f22d3e0b47f1
-http://sweetontology.net/realmCryo                 , dc6e71edc5e8275538315b5cafbe6373da0659a6c8f35fb12c4e50f72085eddd
+http://sweetontology.net/realmCryo                 , 07caf9515a3fd17152a0329114c4204073dd307cc1e9472bbbb625f4df39b885
 http://sweetontology.net/realmEarthReference       , e9a5cc9d2a1813bf1f474273c5994a57a2153926b7e81a357a803314a5a0aae9
 http://sweetontology.net/realmGeol                 , f1d120bea5544c529df22aea76552253b4407c351f8e258480b9a9ba6f624228
 http://sweetontology.net/realmGeolBasin            , f521e8630430c2cd944c9cc857d6148fa047454a9df4051d851d89bd71fc7202
@@ -136,7 +136,7 @@ http://sweetontology.net/realmGeolContinental      , 69865b06fcce3950df0bbe94c9a
 http://sweetontology.net/realmGeolOceanic          , 0961c933bf067f2a0b578839daebeba425339507dd64f39a5c782ebccf18c220
 http://sweetontology.net/realmGeolOrogen           , a22cc0976344b8108248ccf072d83d490bf938267203f857745e4fcff3303812
 http://sweetontology.net/realmHydro                , a32f8b778e7b5dadc419f7ab1c82a85901ff2d62b91b8ceaf8e58793cde23ffb
-http://sweetontology.net/realmHydroBody            , e6d0266f5d1573fd8a135c1ecdeef5deb5f442c651585e8297b2b07000402de5
+http://sweetontology.net/realmHydroBody            , 55ea159f66be4cbd71a1491d96ba1e67f1cc8b2dd8ddb17ccd1959117a374586
 http://sweetontology.net/realmLandAeolian          , f876aace23fd87740b6566ac861a14db2f281d0cf108986dcf2b5bfaa0384577
 http://sweetontology.net/realmLandCoastal          , 15edaeda16600360ec56944f0cef39e3c716cf58e507d34986d44848fe4b11f1
 http://sweetontology.net/realmLandFluvial          , 68b9a58d1ed0991e9c32fafa66d8cea70d352218da4fd75ed594a01b12a2ed72
@@ -176,12 +176,12 @@ http://sweetontology.net/reprMathFunctionOrthogonal, c6ffba98ea2a30b8a71552872f3
 http://sweetontology.net/reprMathGraph             , 93487beb092d4dde74ac0c115fd59622684455e7826b72d968c976d1906f4510
 http://sweetontology.net/reprMathOperation         , bc223858b49cab7218d206276fc210511a237f017f8a64e74da355fce809760a
 http://sweetontology.net/reprMathSolution          , 803923e2140bcae8cab9bc97ce4b4b00d7045e0c1609ce6c5cbd7cb12074d542
-http://sweetontology.net/reprMathStatistics        , b90f9cb7c5c7c7e4e58929b40df1b9e80f16c846fbb3e1932669f74d8251e48f
+http://sweetontology.net/reprMathStatistics        , 8eb80caded554806ec622f7d2bb1e5784d9b0815b07c7964c321056328c8f090
 http://sweetontology.net/reprSciComponent          , 65d1f360c1c8d4ad97c72fcb16991d77668dd84f68a1e03e7bea3509942366ed
 http://sweetontology.net/reprSciFunction           , 7658029c7b02191dbcd9b58246da43d29d9377939224e3ae6880c602e5966134
 http://sweetontology.net/reprSciLaw                , 9b49c78cd3d6282cd524cf8feecbdd8d014115c1e4c0310c37cad2d594f8c929
 http://sweetontology.net/reprSciMethodology        , bc10290277bf550a0f0e9eee8b695f94ee4a15900f563f5ca619e9e2ea38fbc8
-http://sweetontology.net/reprSciModel              , 0476d0c56f6acf3ffc2867e98a9a3df64cf4f23dd716201cf0b53edb40c93d39
+http://sweetontology.net/reprSciModel              , 0b797c6f6591e9df803a366893a3889f7f956f29d9121a27bd8cc09e34fdf7c6
 http://sweetontology.net/reprSciProvenance         , 36b5d68fdb97f9176a9598f9f920ee675695b647cfdcad195f5a814d9e006e4d
 http://sweetontology.net/reprSciUnits              , f929f2bfc29627effa05345352f5f589ac704bc57ab23203166173e392b64d1b
 http://sweetontology.net/reprSpace                 , b8658df6bc203aa2017713262babb666c15987077d6c2366c6994656c98bd2c9
