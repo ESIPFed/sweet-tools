@@ -38,7 +38,7 @@ object Github {
         "alignments/sweet-dcat-mapping.ttl"
 
       else
-        iri.substring("http://sweetontology.net/".length) + ".ttl"
+        "src/" + iri.substring("http://sweetontology.net/".length) + ".ttl"
     }
     getFile(ttlName)
   }
