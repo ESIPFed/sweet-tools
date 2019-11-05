@@ -5,10 +5,7 @@
 // in one other given directory using Jena's isIsomorphic check.
 //
 // USAGE:
-//       ./check_isomorphic.sc dirA dirB [--reportAll]
-//
-// By default, only reports files that are not isomorphic or
-// that have some loading error. Use --reportAll to report all.
+//       ./check_isomorphic.sc dirA dirB
 //
 
 import $ivy.`org.slf4j:slf4j-nop:1.7.25`
@@ -20,7 +17,7 @@ import org.apache.jena.rdf.model.Model
 import java.io.File
 
 @main
-def main(dirA: String, dirB: String, reportAll: Boolean = false) {
+def main(dirA: String, dirB: String) {
   val dirAFile = new File(dirA)
 
   val files = dirAFile
@@ -39,28 +36,24 @@ def main(dirA: String, dirB: String, reportAll: Boolean = false) {
       }
     }
     else {
-      println(s"$fileA: not found under $dirB")
+      println(s"$fileA: not found under $dirB\n")
     }
   }
-  println(s"$okCount isomorphic files out of ${files.length}")
+  println(s"\n$okCount isomorphic files out of ${files.length}")
 
   def compare(fileA: File, fileB: File): Boolean = {
-    if (reportAll)  {
-      print(s"- ${fileA.getName}")
-      Console.out.flush()
-    }
+    print(s"\n- ${fileA.getName}")
+    Console.out.flush()
+
+    val modelAOpt = loadModel(fileA)
+    val modelBOpt = loadModel(fileB)
 
     val result = for {
-      modelA ← loadModel(fileA)
-      modelB ← loadModel(fileB)
+      modelA ← modelAOpt
+      modelB ← modelBOpt
     } yield {
       val isomorphic = modelA.isIsomorphicWith(modelB)
-      if (reportAll) {
-        println(if (isomorphic) " √" else " Not isomorphic\n")
-      }
-      else if (!isomorphic) {
-        println(s"- ${fileA.getName} NOT ISOMORPHIC\n")
-      }
+      print(if (isomorphic) " √" else " NOT ISOMORPHIC")
       isomorphic
     }
 
@@ -71,13 +64,9 @@ def main(dirA: String, dirB: String, reportAll: Boolean = false) {
     try Some(RDFDataMgr.loadModel(file.getPath))
     catch {
       case e: Exception ⇒
-        if (!reportAll)  {
-          print(s"- ${file.getName}")
-        }
-        println()
         val parentName = file.getParentFile.getName
         val name = parentName + "/" + file.getName
-        println(s"  ERROR: $name: ${e.getMessage}\n")
+        print(s"\n  ERROR: $name: ${e.getMessage}")
         None
     }
   }
