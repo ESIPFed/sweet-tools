@@ -57,7 +57,7 @@ def main(dirA: String, dirB: String) {
         print(" √")
       }
       else {
-        val reportName = s"${fileA.getName}.diff"
+        val reportName = s"${fileA.getName}.diff.txt"
         print(s" NOT ISOMORPHIC, see $reportName")
         reportDiff(reportName, modelA, modelB)
       }
