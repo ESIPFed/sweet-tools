@@ -14,7 +14,7 @@ import $ivy.`org.apache.jena:jena-tdb:3.2.0`
 import org.apache.jena.riot.RDFDataMgr
 import org.apache.jena.rdf.model.Model
 
-import java.io.File
+import java.io.{File, ByteArrayOutputStream}
 
 @main
 def main(dirA: String, dirB: String) {
@@ -53,11 +53,45 @@ def main(dirA: String, dirB: String) {
       modelB ← modelBOpt
     } yield {
       val isomorphic = modelA.isIsomorphicWith(modelB)
-      print(if (isomorphic) " √" else " NOT ISOMORPHIC")
+      if (isomorphic) {
+        print(" √")
+      }
+      else {
+        val reportName = s"${fileA.getName}.diff"
+        print(s" NOT ISOMORPHIC, see $reportName")
+        reportDiff(reportName, modelA, modelB)
+      }
       isomorphic
     }
 
     result.getOrElse(false)
+  }
+
+  def reportDiff(reportName: String, modelA: Model, modelB: Model): Unit = {
+    def modelToNTriples(model: Model): Set[String] = {
+      val ba = new ByteArrayOutputStream()
+      modelA.write(ba, "n-triples")
+      val str = ba.toString()
+      str.split("\n").toSet
+    }
+
+    val triplesA = modelToNTriples(modelA)
+    val triplesB = modelToNTriples(modelB)
+
+    val aDiffB = triplesA.diff(triplesB)
+    val bDiffA = triplesB.diff(triplesA)
+
+    val report =
+      s"""
+         |${aDiffB.size} triples in 1st model but not in the 2nd:
+         |  ${aDiffB.toList.sorted.mkString("\n  ")}
+         |
+         |${bDiffA.size} triples in 2nd model but not in the 1st:
+         |  ${bDiffA.toList.sorted.mkString("\n  ")}
+         |""".stripMargin
+
+    import ammonite.ops.{write, pwd}
+    write.over(pwd / reportName, report)
   }
 
   def loadModel(file: File): Option[Model] = {
