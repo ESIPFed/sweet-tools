@@ -70,7 +70,7 @@ def main(dirA: String, dirB: String) {
   def reportDiff(reportName: String, modelA: Model, modelB: Model): Unit = {
     def modelToNTriples(model: Model): Set[String] = {
       val ba = new ByteArrayOutputStream()
-      modelA.write(ba, "n-triples")
+      model.write(ba, "n-triples")
       val str = ba.toString()
       str.split("\n").toSet
     }
