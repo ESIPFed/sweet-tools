@@ -68,13 +68,6 @@ def main(dirA: String, dirB: String) {
   }
 
   def reportDiff(reportName: String, modelA: Model, modelB: Model): Unit = {
-    def modelToNTriples(model: Model): Set[String] = {
-      val ba = new ByteArrayOutputStream()
-      model.write(ba, "n-triples")
-      val str = ba.toString()
-      str.split("\n").toSet
-    }
-
     val triplesA = modelToNTriples(modelA)
     val triplesB = modelToNTriples(modelB)
 
@@ -92,6 +85,13 @@ def main(dirA: String, dirB: String) {
 
     import ammonite.ops.{write, pwd}
     write.over(pwd / reportName, report)
+  }
+
+  def modelToNTriples(model: Model): Set[String] = {
+    val ba = new ByteArrayOutputStream()
+    model.write(ba, "n-triples")
+    val str = ba.toString()
+    str.split("\n").toSet
   }
 
   def loadModel(file: File): Option[Model] = {
