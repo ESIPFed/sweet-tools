@@ -1,8 +1,9 @@
 #!/usr/bin/env amm
 
-import scalaj.http._
 import ammonite.ops._
 import fansi.Color._
+import $ivy.`org.scalaj::scalaj-http:2.4.2`
+import scalaj.http._
 import java.io.File
 import $ivy.`org.slf4j:slf4j-nop:1.7.25`
 import $ivy.`com.typesafe:config:1.3.1`

@@ -2,9 +2,10 @@
 // CorClient: Utility to interact with the COR API endpoint.
 //
 
-import scalaj.http._
 import ammonite.ops._
 import fansi.Color._
+import $ivy.`org.scalaj::scalaj-http:2.4.2`
+import scalaj.http._
 import java.io.File
 import $ivy.`com.typesafe:config:1.3.1`
 import com.typesafe.config.{Config, ConfigFactory}

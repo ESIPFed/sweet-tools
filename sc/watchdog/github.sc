@@ -2,6 +2,7 @@
 // Github: Utility to retrieve SWEET info from Github.
 //
 
+import $ivy.`org.scalaj::scalaj-http:2.4.2`
 import scalaj.http._
 import ammonite.ops._
 import java.io.File
