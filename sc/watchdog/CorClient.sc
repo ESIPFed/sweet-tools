@@ -10,8 +10,8 @@ import java.io.File
 import $ivy.`com.typesafe:config:1.3.1`
 import com.typesafe.config.{Config, ConfigFactory}
 import $ivy.`joda-time:joda-time:2.9.7`, org.joda.time.DateTime
-import $ivy.`org.json4s::json4s-native:3.5.3`
-import $ivy.`org.json4s::json4s-ext:3.5.3`
+import $ivy.`org.json4s::json4s-native:3.6.7`
+import $ivy.`org.json4s::json4s-ext:3.6.7`
 import org.json4s._
 import org.json4s.ext.JodaTimeSerializers
 import org.json4s.native.JsonMethods._

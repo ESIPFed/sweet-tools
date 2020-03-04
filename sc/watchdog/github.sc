@@ -6,7 +6,7 @@ import $ivy.`org.scalaj::scalaj-http:2.4.2`
 import scalaj.http._
 import ammonite.ops._
 import java.io.File
-import $ivy.`org.json4s::json4s-native:3.5.3`
+import $ivy.`org.json4s::json4s-native:3.6.7`
 import org.json4s._
 import org.json4s.native.JsonMethods._
 import $file.util, util._
