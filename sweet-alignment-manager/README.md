@@ -2,7 +2,7 @@
 
 This repo is an attempt to create a **generic alignment manager** e.g. which can be used for the task of generic ontology alignments, providing a pipeline and results for aligning SWEET with various ontologies.
 
-This is semi-automated but the goal is to learn from a seed of initial curated equivalence axioms using the [Agreement Maker Light](https://github.com/AgreementMakerLight/AML-Jar) (AML). AML is a lightweight ontology matching system specialized on the biomedical domain but applicable to any ontologies. It can be used to generate alignments automatically, as a platform for reviewing alignments, or as an alignment repair system (both automatically and interactively). Bu default, AML is configured within the SAM to generate alignments automatically. More information can be found below. 
+This is semi-automated but the goal is to learn from a seed of initial curated equivalence axioms using the [Agreement Maker Light](https://github.com/AgreementMakerLight/AML-Project) (AML). AML is a lightweight ontology matching system specialized on the biomedical domain but applicable to any ontologies. It can be used to generate alignments automatically, as a platform for reviewing alignments, or as an alignment repair system (both automatically and interactively). Bu default, AML is configured within the SAM to generate alignments automatically. More information can be found below. 
 
 ## Prerequisites and Configuration
 
