@@ -27,7 +27,7 @@ make setup
 make
 ```
 
-On subsequent runs, you do not need `make setup`. This clones [SWEET](https://github.com/esipfed/sweet) and [Agreement Maker Light](https://github.com/AgreementMakerLight/AML-Jar) into this repo so is only needed once.
+On subsequent runs, you do not need `make setup`. This clones [SWEET](https://github.com/esipfed/sweet) and [Agreement Maker Light](https://github.com/AgreementMakerLight/AML-Project) into this repo so is only needed once.
 
 ## Results
 
