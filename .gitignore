@@ -7,3 +7,5 @@ sweet-alignment-manager/AML-Jar
 sweet-alignment-manager/sweet
 sweet-alignment-manager/target/*
 sweet-alignment-manager/alignments/*
+sc/target*
+sc/augment_wikidata_definitions/project/target*
