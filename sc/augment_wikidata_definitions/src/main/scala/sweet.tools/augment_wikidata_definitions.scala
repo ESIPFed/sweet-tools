@@ -1,12 +1,16 @@
 package sweet.tools
 
 import java.io.File
+import java.io.FileWriter
 
 import org.apache.jena.query.QueryExecutionFactory
 import org.apache.jena.rdf.model.ResourceFactory
 import org.apache.jena.riot.RDFDataMgr
+import org.apache.jena.riot.RDFFormat
 import org.apache.jena.rdf.model._
 import org.apache.jena.vocabulary._
+
+import scala.collection.mutable.ArrayBuffer
 
 // From Jena vocabulary package:
 //   RDF.`type`  --> http://www.w3.org/1999/02/22-rdf-syntax-ns#type
@@ -46,12 +50,18 @@ object augment_wikidata_definitions {
             println(s"  labelStatement: ${labelStatement}")
             if (labelStatement != null) {
               val label = getValueAsString(labelStatement.getObject)
-              val wikidataDescriptions = executeWikidataDescriptionQuery(label)
-              wikidataDescriptions.foreach((description: String) => classResource.addLiteral(schemaDescriptionProp, description))
+              val wikidataDescription = executeWikidataDescriptionQuery(label)
+              if (!Option(wikidataDescription).getOrElse("").isEmpty) {
+                println(s"  schema:description: ${wikidataDescription}")
+                println(s"  ${schemaDescriptionProp}    ${wikidataDescription}")
+                classResource.addLiteral(schemaDescriptionProp, wikidataDescription)
+              }
             }
           }
         }
         else println("No class resources.")
+        val outFile = new FileWriter(file)
+        RDFDataMgr.write(outFile, model, org.apache.jena.riot.RDFFormat.TURTLE_PRETTY)
       }
     }
 
@@ -64,19 +74,16 @@ object augment_wikidata_definitions {
       }
     }
 
-    def executeWikidataDescriptionQuery(label: String): Array[String] = {
+    def executeWikidataDescriptionQuery(label: String): String = {
       val query = getWikidataDescriptionQuery(label)
-      val definitions = new Array[String](10)
       val response = tryWith(QueryExecutionFactory.sparqlService("https://query.wikidata.org/sparql", query)){qexec =>
         val results = qexec.execSelect()
-        if (results.hasNext())  {
-          val soln = results.next()
-          //val x = soln.get("varName") ;       // Get a result variable by name.
-          //val r = soln.getResource("VarR") ; // Get a result variable - must be a resource
-          definitions :+ soln.getLiteral("?o").toString()   // Get a result variable - must be a literal
+        if (results.hasNext()) {
+          var soln = results.next()
+          return soln.getLiteral("o").getString()
         }
       }
-      return definitions
+      return null
     }
 
     def getWikidataDescriptionQuery(label: String): String = {
@@ -98,6 +105,7 @@ object augment_wikidata_definitions {
 
     def tryWith[R, T <: AutoCloseable](resource: T)(doWork: T => R): R = {
       try {
+        
         doWork(resource)
       }
       finally {
