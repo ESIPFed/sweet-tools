@@ -8,9 +8,9 @@ lazy val root = (project in file("."))
     name := "augment_wikidata_definitions",
 
     libraryDependencies ++= Seq(
-      ("org.apache.jena" % "jena-core" % "3.3.0").exclude("org.slf4j", "slf4j-log4j12"),
+      ("org.apache.jena" % "jena-core" % "3.14.0").exclude("org.slf4j", "slf4j-log4j12"),
 
-      "org.apache.jena" % "jena-tdb" % "3.3.0",
+      "org.apache.jena" % "jena-tdb" % "3.14.0",
       // Per https://jena.apache.org/download/maven.html:
       //  "...use of <type>pom</type> ... does not work in all tools.
       //  An alternative is to depend on jena-tdb, which will pull in the other artifacts."

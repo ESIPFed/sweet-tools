@@ -26,7 +26,6 @@ object augment_wikidata_definitions {
     else println("Missing directory argument")
   }
 
-  val schemaDescriptionProp = ResourceFactory.createProperty("http://schema.org/description")
   def main(dir: String): Unit = {
     val dirFile = new File(dir)
 
@@ -52,9 +51,10 @@ object augment_wikidata_definitions {
               val label = getValueAsString(labelStatement.getObject)
               val wikidataDescription = executeWikidataDescriptionQuery(label)
               if (!Option(wikidataDescription).getOrElse("").isEmpty) {
-                println(s"  schema:description: ${wikidataDescription}")
-                println(s"  ${schemaDescriptionProp}    ${wikidataDescription}")
-                classResource.addLiteral(schemaDescriptionProp, wikidataDescription)
+                model.setNsPrefix("schema","http://schema.org/");  
+                println(s"  ${model.expandPrefix("schema:description")}    ${wikidataDescription}")
+                classResource.addLiteral(ResourceFactory.createProperty(
+                        model.expandPrefix("schema:description")), wikidataDescription)
               }
             }
           }
