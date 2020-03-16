@@ -46,13 +46,13 @@ object augment_wikidata_definitions {
             val classResource = owlClasses.nextResource()
             println(s"  class resource: ${classResource}")
             val labelStatement = classResource.getProperty(RDFS.label, "en")
-            println(s"  labelStatement: ${labelStatement}")
+            println(s"    label statement: ${labelStatement}")
             if (labelStatement != null) {
               val label = getValueAsString(labelStatement.getObject)
               val wikidataDescription = executeWikidataDescriptionQuery(label)
-              if (!Option(wikidataDescription).getOrElse("").isEmpty) {
+              if (wikidataDescription != null) {
                 model.setNsPrefix("schema","http://schema.org/");  
-                println(s"  ${model.expandPrefix("schema:description")}    ${wikidataDescription}")
+                println(s"      schema.org/descritpion: ${model.expandPrefix("schema:description")}    ${wikidataDescription.getLexicalForm()}")
                 classResource.addLiteral(ResourceFactory.createProperty(
                         model.expandPrefix("schema:description")), wikidataDescription)
               }
@@ -74,13 +74,13 @@ object augment_wikidata_definitions {
       }
     }
 
-    def executeWikidataDescriptionQuery(label: String): String = {
+    def executeWikidataDescriptionQuery(label: String): Literal = {
       val query = getWikidataDescriptionQuery(label)
       val response = tryWith(QueryExecutionFactory.sparqlService("https://query.wikidata.org/sparql", query)){qexec =>
         val results = qexec.execSelect()
         if (results.hasNext()) {
           var soln = results.next()
-          return soln.getLiteral("o").getString()
+          return soln.getLiteral("o")
         }
       }
       return null
