@@ -10,3 +10,6 @@ sweet-alignment-manager/alignments/*
 sc/target*
 sc/augment_wikidata_definitions/project/target*
 sc/augment_wikidata_definitions/target*
+.DS_Store
+target
+sc/augment_wikidata_definitions/.*

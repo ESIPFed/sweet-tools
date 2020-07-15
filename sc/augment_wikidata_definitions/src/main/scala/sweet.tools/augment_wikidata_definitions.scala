@@ -1,21 +1,14 @@
 package sweet.tools
 
-import java.io.File
-import java.io.FileWriter
+import java.io.{File, FileOutputStream}
+import java.util
+import java.util.Optional
 
 import org.apache.jena.query.QueryExecutionFactory
-import org.apache.jena.rdf.model.ResourceFactory
-import org.apache.jena.riot.RDFDataMgr
-import org.apache.jena.riot.RDFFormat
 import org.apache.jena.rdf.model._
-import org.apache.jena.vocabulary._
-
-import scala.collection.mutable.ArrayBuffer
-
-// From Jena vocabulary package:
-//   RDF.`type`  --> http://www.w3.org/1999/02/22-rdf-syntax-ns#type
-//   OWL.Class   --> http://www.w3.org/2002/07/owl#Class
-//   RDFS.label  --> http://www.w3.org/2000/01/rdf-schema#label
+import org.semanticweb.owlapi.formats
+import org.semanticweb.owlapi.model._
+import org.semanticweb.owlapi.search.EntitySearcher
 
 object augment_wikidata_definitions {
 
@@ -23,11 +16,11 @@ object augment_wikidata_definitions {
     if (args.nonEmpty) {
       main(args.head)
     }
-    else println("Missing directory argument")
+    else println("Missing sweet directory argument")
   }
 
-  def main(dir: String): Unit = {
-    val dirFile = new File(dir)
+  def main(inDir: String): Unit = {
+    val dirFile = new File(inDir)
 
     println(s"listing .ttl files under ${dirFile.getCanonicalPath}")
 
@@ -38,35 +31,65 @@ object augment_wikidata_definitions {
 
     files foreach { file =>
       println(s"  loading ${file.getCanonicalPath}")
-      loadModel(file) foreach { model =>
+      import org.semanticweb.owlapi.apibinding.OWLManager
+      val manager = OWLManager.createOWLOntologyManager
+      loadModel(file, manager) foreach { owlOntology =>
+        val changes = new util.ArrayList[OWLOntologyChange]()
+        val df = manager.getOWLDataFactory
+        val oldVersionAnnotation = df.getOWLAnnotation(df.getOWLVersionInfo, df.getOWLLiteral("3.5.0"))
+        changes.add(new RemoveOntologyAnnotation(owlOntology, oldVersionAnnotation))
+        val newVersionAnnotation = df.getOWLAnnotation(df.getOWLVersionInfo, df.getOWLLiteral("3.6.0"))
+        changes.add(new AddOntologyAnnotation(owlOntology, newVersionAnnotation))
+        import org.semanticweb.owlapi.model.IRI
+        import org.semanticweb.owlapi.model.OWLOntologyID
+        import org.semanticweb.owlapi.model.SetOntologyID
+        val versionIRI = IRI.create(owlOntology.getOntologyID.getOntologyIRI + "/3.6.0")
+        val newVersionIRI = new SetOntologyID(owlOntology,
+          new OWLOntologyID(owlOntology.getOntologyID.getOntologyIRI, Optional.of(versionIRI)))
+        changes.add(newVersionIRI)
         println(s"   getting class resources")
-        val owlClasses = model.listResourcesWithProperty(RDF.`type`, OWL.Class)
-        if (owlClasses.hasNext) {
-          while (owlClasses.hasNext) {
-            val classResource = owlClasses.nextResource()
-            println(s"  class resource: ${classResource}")
-            val labelStatement = classResource.getProperty(RDFS.label, "en")
-            println(s"    label statement: ${labelStatement}")
-            if (labelStatement != null) {
-              val label = getValueAsString(labelStatement.getObject)
-              val wikidataDescription = executeWikidataDescriptionQuery(label)
-              if (wikidataDescription != null) {
-                model.setNsPrefix("schema","http://schema.org/");  
-                println(s"      schema.org/descritpion: ${model.expandPrefix("schema:description")}    ${wikidataDescription.getLexicalForm()}")
-                classResource.addLiteral(ResourceFactory.createProperty(
-                        model.expandPrefix("schema:description")), wikidataDescription)
-              }
+        val classIter = owlOntology.classesInSignature().iterator()
+        while (classIter.hasNext) {
+          val owlClass = classIter.next()
+          println(s"  class resource: ${owlClass.toString}")
+          val annotation = EntitySearcher.getAnnotations(owlClass, owlOntology, df.getRDFSLabel()).findFirst()
+          if (annotation.isPresent) {
+            val annotString = annotation.get().annotationValue().toString
+            val trimmedLabel = annotString.substring(1, annotString.length - 4)
+            println(s"    label statement: ${trimmedLabel}")
+            val wikidataDescription = executeWikidataDescriptionQuery(trimmedLabel)
+            if (wikidataDescription != null) {
+              println(s"      rdfs:comment: ${wikidataDescription.getLexicalForm}")
+              val commentAnno = df.getOWLAnnotation(
+                df.getRDFSComment,
+                df.getOWLLiteral(wikidataDescription.getLexicalForm, "en"))
+              val axiom = df.getOWLAnnotationAssertionAxiom(owlClass.getIRI(), commentAnno)
+              changes.add(new AddAxiom(owlOntology, axiom))
             }
           }
-        }
-        else println("No class resources.")
-        val outFile = new FileWriter(file)
-        RDFDataMgr.write(outFile, model, org.apache.jena.riot.RDFFormat.TURTLE_PRETTY)
+        };
+        manager.applyChanges(changes)
+        val fos = new FileOutputStream(file)
+        manager.saveOntology(owlOntology, new formats.TurtleDocumentFormat(), fos)
+        fos.close()
+        manager.clearOntologies()
+        manager.removeOntology(owlOntology)
+//        val owlManager = OWLManager.createOWLOntologyManager
+//        val ont = owlManager.loadOntologyFromOntologyDocument(file)
+//        import java.io.File
+//        import org.semanticweb.owlapi.model.IRI
+//        val output = File.createTempFile("saved_file", "ttl")
+//        val documentIRI2 = IRI.create(output)
+//        // save in Turtle format
+//        owlManager.saveOntology(owlOntology, new formats.TurtleDocumentFormat(), documentIRI2);
+//        // Remove the ontology from the manager
+//        owlManager.removeOntology(ont);
+
       }
     }
 
-    def loadModel(file: File): Option[Model] = {
-      try Some(RDFDataMgr.loadModel(file.getPath))
+    def loadModel(file: File, manager: OWLOntologyManager): Option[OWLOntology] = {
+      try Some(manager.loadOntologyFromOntologyDocument(file.getAbsoluteFile))
       catch {
         case e: Exception =>
           println(s"ERROR: $file: ${e.getMessage}")
@@ -74,23 +97,23 @@ object augment_wikidata_definitions {
       }
     }
 
-    def executeWikidataDescriptionQuery(label: String): Literal = {
-      val query = getWikidataDescriptionQuery(label)
-      val response = tryWith(QueryExecutionFactory.sparqlService("https://query.wikidata.org/sparql", query)){qexec =>
+    def executeWikidataDescriptionQuery(trimmedLabel: String): Literal = {
+      val query = getWikidataDescriptionQuery(trimmedLabel)
+      val response: Unit = tryWith(QueryExecutionFactory.sparqlService("https://query.wikidata.org/sparql", query)){ qexec =>
         val results = qexec.execSelect()
-        if (results.hasNext()) {
-          var soln = results.next()
+        if (results.hasNext) {
+          val soln = results.next
           return soln.getLiteral("o")
         }
       }
       return null
     }
 
-    def getWikidataDescriptionQuery(label: String): String = {
+    def getWikidataDescriptionQuery(trimmedLabel: String): String = {
       s"""PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
          |PREFIX schema: <http://schema.org/>
          |SELECT ?o WHERE {
-         |    ?s rdfs:label "${label}"@en .
+         |    ?s rdfs:label "$trimmedLabel"@en .
          |    ?s schema:description ?o .
          |    FILTER(LANGMATCHES(LANG(?o), "en"))
          |    FILTER(STRLEN(?o) > 15)
@@ -105,7 +128,6 @@ object augment_wikidata_definitions {
 
     def tryWith[R, T <: AutoCloseable](resource: T)(doWork: T => R): R = {
       try {
-        
         doWork(resource)
       }
       finally {
@@ -119,8 +141,6 @@ object augment_wikidata_definitions {
         }
       }
     }
-
   }
-
 }
 
