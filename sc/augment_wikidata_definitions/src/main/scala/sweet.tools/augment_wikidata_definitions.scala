@@ -1,6 +1,7 @@
 package sweet.tools
 
 import java.io.{File, FileOutputStream}
+import java.time.LocalDateTime
 import java.util
 import java.util.Optional
 
@@ -9,6 +10,7 @@ import org.apache.jena.rdf.model._
 import org.semanticweb.owlapi.formats
 import org.semanticweb.owlapi.model._
 import org.semanticweb.owlapi.search.EntitySearcher
+import org.semanticweb.owlapi.vocab.OWL2Datatype
 
 object augment_wikidata_definitions {
 
@@ -40,12 +42,11 @@ object augment_wikidata_definitions {
         changes.add(new RemoveOntologyAnnotation(owlOntology, oldVersionAnnotation))
         val newVersionAnnotation = df.getOWLAnnotation(df.getOWLVersionInfo, df.getOWLLiteral("3.6.0"))
         changes.add(new AddOntologyAnnotation(owlOntology, newVersionAnnotation))
-        import org.semanticweb.owlapi.model.IRI
-        import org.semanticweb.owlapi.model.OWLOntologyID
-        import org.semanticweb.owlapi.model.SetOntologyID
-        val versionIRI = IRI.create(owlOntology.getOntologyID.getOntologyIRI + "/3.6.0")
+        import org.semanticweb.owlapi.model.{IRI, OWLOntologyID, SetOntologyID}
+        val versionIRI = IRI.create(owlOntology.getOntologyID.getOntologyIRI.get() + "/3.6.0")
         val newVersionIRI = new SetOntologyID(owlOntology,
-          new OWLOntologyID(owlOntology.getOntologyID.getOntologyIRI, Optional.of(versionIRI)))
+          new OWLOntologyID(
+            owlOntology.getOntologyID.getOntologyIRI.get(), Optional.of(versionIRI).get()))
         changes.add(newVersionIRI)
         println(s"   getting class resources")
         val classIter = owlOntology.classesInSignature().iterator()
@@ -59,32 +60,58 @@ object augment_wikidata_definitions {
             println(s"    label statement: ${trimmedLabel}")
             val wikidataDescription = executeWikidataDescriptionQuery(trimmedLabel)
             if (wikidataDescription != null) {
-              println(s"      rdfs:comment: ${wikidataDescription.getLexicalForm}")
+              //skos:definition
+              val defProp = df.getOWLAnnotationProperty("http://www.w3.org/2004/02/skos/core#definition")
+              val skosAnno = df.getOWLAnnotation(defProp, df.getOWLAnonymousIndividual)
+              val skosAxiom = df.getOWLAnnotationAssertionAxiom(owlClass.getIRI(), skosAnno)
+              changes.add(new AddAxiom(owlOntology, skosAxiom))
+              //rdfs:comment
               val commentAnno = df.getOWLAnnotation(
                 df.getRDFSComment,
-                df.getOWLLiteral(wikidataDescription.getLexicalForm, "en"))
-              val axiom = df.getOWLAnnotationAssertionAxiom(owlClass.getIRI(), commentAnno)
-              changes.add(new AddAxiom(owlOntology, axiom))
+                df.getOWLLiteral(wikidataDescription.get(1), "en"))
+              val commentAxiom = df.getOWLAnnotationAssertionAxiom(
+                df.getOWLAnnotationProperty("http://www.w3.org/2000/01/rdf-schema#comment"),
+                skosAxiom.anonymousIndividualValue().get(), commentAnno.annotationValue())
+              changes.add(new AddAxiom(owlOntology, commentAxiom))
+              //prov:wasDerivedFrom
+              val wdfProp = df.getOWLAnnotationProperty("http://www.w3.org/ns/prov#wasDerivedFrom")
+              val provAnno = df.getOWLAnnotation(wdfProp, IRI.create(wikidataDescription.get(0)))
+              val provAxiom = df.getOWLAnnotationAssertionAxiom(
+                wdfProp, skosAxiom.anonymousIndividualValue().get(), provAnno.annotationValue())
+              changes.add(new AddAxiom(owlOntology, provAxiom))
+              //dcterms:source
+              val sProp = df.getOWLAnnotationProperty("http://purl.org/dc/terms/source")
+              val sourceAnno = df.getOWLAnnotation(sProp, IRI.create(wikidataDescription.get(0)))
+              val sourceAxiom = df.getOWLAnnotationAssertionAxiom(
+                sProp, skosAxiom.anonymousIndividualValue().get(), sourceAnno.annotationValue())
+              changes.add(new AddAxiom(owlOntology, sourceAxiom))
+              //dcterms:created
+              val ldt = LocalDateTime.now();
+              val cProp = df.getOWLAnnotationProperty("http://purl.org/dc/terms/created")
+              val createdAnno = df.getOWLAnnotation(cProp, df.getOWLLiteral(ldt.toString, OWL2Datatype.XSD_DATE_TIME))
+              val createdAxiom = df.getOWLAnnotationAssertionAxiom(
+                cProp, skosAxiom.anonymousIndividualValue().get(), createdAnno.annotationValue())
+              changes.add(new AddAxiom(owlOntology, createdAxiom))
+              //dcterms:creator
+              val crProp = df.getOWLAnnotationProperty("http://purl.org/dc/terms/creator")
+              val creatorAnno = df.getOWLAnnotation(crProp, IRI.create("https://orcid.org/0000-0003-2185-928X"))
+              val creatorAxiom = df.getOWLAnnotationAssertionAxiom(
+                crProp, skosAxiom.anonymousIndividualValue().get(), creatorAnno.annotationValue())
+              changes.add(new AddAxiom(owlOntology, creatorAxiom))
             }
           }
         };
         manager.applyChanges(changes)
         val fos = new FileOutputStream(file)
-        manager.saveOntology(owlOntology, new formats.TurtleDocumentFormat(), fos)
+        val format = new formats.TurtleDocumentFormat()
+        format.setDefaultPrefix(owlOntology.getOntologyID.getOntologyIRI.get().getIRIString + "/")
+        format.setPrefix("dcterms", "http://purl.org/dc/terms/")
+        format.setPrefix("prov", "http://www.w3.org/ns/prov#")
+        format.setPrefix("skos", "http://www.w3.org/2004/02/skos/core#")
+        manager.saveOntology(owlOntology, format, fos)
         fos.close()
         manager.clearOntologies()
         manager.removeOntology(owlOntology)
-//        val owlManager = OWLManager.createOWLOntologyManager
-//        val ont = owlManager.loadOntologyFromOntologyDocument(file)
-//        import java.io.File
-//        import org.semanticweb.owlapi.model.IRI
-//        val output = File.createTempFile("saved_file", "ttl")
-//        val documentIRI2 = IRI.create(output)
-//        // save in Turtle format
-//        owlManager.saveOntology(owlOntology, new formats.TurtleDocumentFormat(), documentIRI2);
-//        // Remove the ontology from the manager
-//        owlManager.removeOntology(ont);
-
       }
     }
 
@@ -97,13 +124,16 @@ object augment_wikidata_definitions {
       }
     }
 
-    def executeWikidataDescriptionQuery(trimmedLabel: String): Literal = {
+    def executeWikidataDescriptionQuery(trimmedLabel: String): util.ArrayList[String] = {
       val query = getWikidataDescriptionQuery(trimmedLabel)
       val response: Unit = tryWith(QueryExecutionFactory.sparqlService("https://query.wikidata.org/sparql", query)){ qexec =>
         val results = qexec.execSelect()
         if (results.hasNext) {
           val soln = results.next
-          return soln.getLiteral("o")
+          val wikiList: util.ArrayList[String] = new util.ArrayList()
+          wikiList.add(soln.getResource("s").toString)
+          wikiList.add(soln.getLiteral("o").getLexicalForm)
+          return wikiList
         }
       }
       return null
@@ -112,7 +142,7 @@ object augment_wikidata_definitions {
     def getWikidataDescriptionQuery(trimmedLabel: String): String = {
       s"""PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
          |PREFIX schema: <http://schema.org/>
-         |SELECT ?o WHERE {
+         |SELECT * WHERE {
          |    ?s rdfs:label "$trimmedLabel"@en .
          |    ?s schema:description ?o .
          |    FILTER(LANGMATCHES(LANG(?o), "en"))
