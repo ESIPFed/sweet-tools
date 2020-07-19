@@ -59,9 +59,10 @@ object augment_wikidata_definitions {
             val trimmedLabel = annotString.substring(1, annotString.length - 4)
             println(s"    label statement: ${trimmedLabel}")
             val wikidataDescription = executeWikidataDescriptionQuery(trimmedLabel)
-            if (wikidataDescription != null) {
+            val defProp = df.getOWLAnnotationProperty("http://www.w3.org/2004/02/skos/core#definition")
+            if (wikidataDescription != null &&
+              EntitySearcher.getAnnotationObjects(owlClass, owlOntology, defProp).count()==0) {
               //skos:definition
-              val defProp = df.getOWLAnnotationProperty("http://www.w3.org/2004/02/skos/core#definition")
               val skosAnno = df.getOWLAnnotation(defProp, df.getOWLAnonymousIndividual)
               val skosAxiom = df.getOWLAnnotationAssertionAxiom(owlClass.getIRI(), skosAnno)
               changes.add(new AddAxiom(owlOntology, skosAxiom))
@@ -74,11 +75,11 @@ object augment_wikidata_definitions {
                 skosAxiom.anonymousIndividualValue().get(), commentAnno.annotationValue())
               changes.add(new AddAxiom(owlOntology, commentAxiom))
               //prov:wasDerivedFrom
-              val wdfProp = df.getOWLAnnotationProperty("http://www.w3.org/ns/prov#wasDerivedFrom")
-              val provAnno = df.getOWLAnnotation(wdfProp, IRI.create(wikidataDescription.get(0)))
-              val provAxiom = df.getOWLAnnotationAssertionAxiom(
-                wdfProp, skosAxiom.anonymousIndividualValue().get(), provAnno.annotationValue())
-              changes.add(new AddAxiom(owlOntology, provAxiom))
+//              val wdfProp = df.getOWLAnnotationProperty("http://www.w3.org/ns/prov#wasDerivedFrom")
+//              val provAnno = df.getOWLAnnotation(wdfProp, IRI.create(wikidataDescription.get(0)))
+//              val provAxiom = df.getOWLAnnotationAssertionAxiom(
+//                wdfProp, skosAxiom.anonymousIndividualValue().get(), provAnno.annotationValue())
+//              changes.add(new AddAxiom(owlOntology, provAxiom))
               //dcterms:source
               val sProp = df.getOWLAnnotationProperty("http://purl.org/dc/terms/source")
               val sourceAnno = df.getOWLAnnotation(sProp, IRI.create(wikidataDescription.get(0)))
@@ -106,7 +107,7 @@ object augment_wikidata_definitions {
         val format = new formats.TurtleDocumentFormat()
         format.setDefaultPrefix(owlOntology.getOntologyID.getOntologyIRI.get().getIRIString + "/")
         format.setPrefix("dcterms", "http://purl.org/dc/terms/")
-        format.setPrefix("prov", "http://www.w3.org/ns/prov#")
+        //format.setPrefix("prov", "http://www.w3.org/ns/prov#")
         format.setPrefix("skos", "http://www.w3.org/2004/02/skos/core#")
         manager.saveOntology(owlOntology, format, fos)
         fos.close()
