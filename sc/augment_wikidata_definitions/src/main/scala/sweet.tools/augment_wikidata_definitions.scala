@@ -7,8 +7,9 @@ import java.util.Optional
 
 import org.apache.jena.query.QueryExecutionFactory
 import org.apache.jena.rdf.model._
+import com.github.tototoshi.csv._
 import org.semanticweb.owlapi.formats
-import org.semanticweb.owlapi.model._
+import org.semanticweb.owlapi.model.{AddAxiom, AddOntologyAnnotation, OWLAnnotationValue, OWLClass, OWLOntology, OWLOntologyChange, OWLOntologyManager, RemoveOntologyAnnotation}
 import org.semanticweb.owlapi.search.EntitySearcher
 import org.semanticweb.owlapi.vocab.OWL2Datatype
 
@@ -19,6 +20,12 @@ object augment_wikidata_definitions {
       main(args.head)
     }
     else println("Missing sweet directory argument")
+  }
+
+  def writeCSV(owlClass: OWLClass, trimmedLabel: String, value: OWLAnnotationValue, value1: OWLAnnotationValue): Unit = {
+    val writer = CSVWriter.open("entries.csv", append = true)
+    writer.writeRow(List(owlClass.getIRI, trimmedLabel, value.toString, value1.toString))
+    writer.close()
   }
 
   def main(inDir: String): Unit = {
@@ -99,50 +106,58 @@ object augment_wikidata_definitions {
                 val creatorAxiom = df.getOWLAnnotationAssertionAxiom(
                   crProp, skosAxiom.anonymousIndividualValue().get(), creatorAnno.annotationValue())
                 changes.add(new AddAxiom(owlOntology, creatorAxiom))
-            } else {
-            //skos:definition
-            val skosAnno = df.getOWLAnnotation(defProp, df.getOWLAnonymousIndividual)
-            val skosAxiom = df.getOWLAnnotationAssertionAxiom(owlClass.getIRI(), skosAnno)
-            changes.add(new AddAxiom(owlOntology, skosAxiom))
-            //skos:historyNote
-            val historicalAnno = df.getOWLAnnotation(
-              df.getOWLAnnotationProperty("http://www.w3.org/2004/02/skos/core#historyNote"),
-              df.getOWLLiteral("Native curated definition by ESIP Semantic Harmonization Commitee.", "en"))
-            //rdfs:comment
-            val commentAnno = df.getOWLAnnotation(
-              df.getRDFSComment,
-              df.getOWLLiteral(wikidataDescription.get(1), "en"))
-            val commentAxiom = df.getOWLAnnotationAssertionAxiom(
-              df.getOWLAnnotationProperty("http://www.w3.org/2000/01/rdf-schema#comment"),
-              skosAxiom.anonymousIndividualValue().get(), commentAnno.annotationValue())
-            changes.add(new AddAxiom(owlOntology, commentAxiom))
-            //prov:wasDerivedFrom
-            //              val wdfProp = df.getOWLAnnotationProperty("http://www.w3.org/ns/prov#wasDerivedFrom")
-            //              val provAnno = df.getOWLAnnotation(wdfProp, IRI.create(wikidataDescription.get(0)))
-            //              val provAxiom = df.getOWLAnnotationAssertionAxiom(
-            //                wdfProp, skosAxiom.anonymousIndividualValue().get(), provAnno.annotationValue())
-            //              changes.add(new AddAxiom(owlOntology, provAxiom))
-            //dcterms:source
-            val sProp = df.getOWLAnnotationProperty("http://purl.org/dc/terms/source")
-            val sourceAnno = df.getOWLAnnotation(sProp, IRI.create(wikidataDescription.get(0)))
-            val sourceAxiom = df.getOWLAnnotationAssertionAxiom(
-              sProp, skosAxiom.anonymousIndividualValue().get(), sourceAnno.annotationValue())
-            changes.add(new AddAxiom(owlOntology, sourceAxiom))
-            //dcterms:created
-            val ldt = LocalDateTime.now();
-            val cProp = df.getOWLAnnotationProperty("http://purl.org/dc/terms/created")
-            val createdAnno = df.getOWLAnnotation(cProp, df.getOWLLiteral(ldt.toString, OWL2Datatype.XSD_DATE_TIME))
-            val createdAxiom = df.getOWLAnnotationAssertionAxiom(
-              cProp, skosAxiom.anonymousIndividualValue().get(), createdAnno.annotationValue())
-            changes.add(new AddAxiom(owlOntology, createdAxiom))
-            //dcterms:creator
-            val crProp = df.getOWLAnnotationProperty("http://purl.org/dc/terms/creator")
-            val creatorAnno = df.getOWLAnnotation(crProp, IRI.create("https://orcid.org/0000-0003-2185-928X"))
-            val creatorAxiom = df.getOWLAnnotationAssertionAxiom(
-              crProp, skosAxiom.anonymousIndividualValue().get(), creatorAnno.annotationValue())
-            changes.add(new AddAxiom(owlOntology, creatorAxiom))
+
+                writeCSV(owlClass, trimmedLabel, sourceAnno.annotationValue(), commentAnno.annotationValue())
+              } else {
+                //skos:definition
+                val skosAnno = df.getOWLAnnotation(defProp, df.getOWLAnonymousIndividual)
+                val skosAxiom = df.getOWLAnnotationAssertionAxiom(owlClass.getIRI(), skosAnno)
+                changes.add(new AddAxiom(owlOntology, skosAxiom))
+                //skos:historyNote
+                val hProp = df.getOWLAnnotationProperty("http://www.w3.org/2004/02/skos/core#historyNote")
+                val historicalAnno = df.getOWLAnnotation(hProp,
+                  df.getOWLLiteral("Native curated definition by ESIP Semantic Harmonization Committee.", "en"))
+                val historicalAxiom = df.getOWLAnnotationAssertionAxiom(hProp,
+                  skosAxiom.anonymousIndividualValue().get(), historicalAnno.annotationValue())
+                changes.add(new AddAxiom(owlOntology, historicalAxiom))
+                //rdfs:comment
+                val commentAnno = df.getOWLAnnotation(
+                  df.getRDFSComment,
+                  df.getOWLLiteral(wikidataDescription.get(1), "en"))
+                val commentAxiom = df.getOWLAnnotationAssertionAxiom(
+                  df.getOWLAnnotationProperty("http://www.w3.org/2000/01/rdf-schema#comment"),
+                  skosAxiom.anonymousIndividualValue().get(), commentAnno.annotationValue())
+                changes.add(new AddAxiom(owlOntology, commentAxiom))
+                //prov:wasDerivedFrom
+                //              val wdfProp = df.getOWLAnnotationProperty("http://www.w3.org/ns/prov#wasDerivedFrom")
+                //              val provAnno = df.getOWLAnnotation(wdfProp, IRI.create(wikidataDescription.get(0)))
+                //              val provAxiom = df.getOWLAnnotationAssertionAxiom(
+                //                wdfProp, skosAxiom.anonymousIndividualValue().get(), provAnno.annotationValue())
+                //              changes.add(new AddAxiom(owlOntology, provAxiom))
+                //dcterms:source
+                val sProp = df.getOWLAnnotationProperty("http://purl.org/dc/terms/source")
+                val sourceAnno = df.getOWLAnnotation(sProp, IRI.create(wikidataDescription.get(0)))
+                val sourceAxiom = df.getOWLAnnotationAssertionAxiom(
+                  sProp, skosAxiom.anonymousIndividualValue().get(), sourceAnno.annotationValue())
+                changes.add(new AddAxiom(owlOntology, sourceAxiom))
+                //dcterms:created
+                val ldt = LocalDateTime.now();
+                val cProp = df.getOWLAnnotationProperty("http://purl.org/dc/terms/created")
+                val createdAnno = df.getOWLAnnotation(cProp, df.getOWLLiteral(ldt.toString, OWL2Datatype.XSD_DATE_TIME))
+                val createdAxiom = df.getOWLAnnotationAssertionAxiom(
+                  cProp, skosAxiom.anonymousIndividualValue().get(), createdAnno.annotationValue())
+                changes.add(new AddAxiom(owlOntology, createdAxiom))
+                //dcterms:creator
+                val crProp = df.getOWLAnnotationProperty("http://purl.org/dc/terms/creator")
+                val creatorAnno = df.getOWLAnnotation(crProp, IRI.create("https://orcid.org/0000-0003-2185-928X"))
+                val creatorAxiom = df.getOWLAnnotationAssertionAxiom(
+                  crProp, skosAxiom.anonymousIndividualValue().get(), creatorAnno.annotationValue())
+                changes.add(new AddAxiom(owlOntology, creatorAxiom))
+
+                writeCSV(owlClass, trimmedLabel, sourceAnno.annotationValue(), commentAnno.annotationValue())
+              }
+            }
           }
-          }}
         };
         manager.applyChanges(changes)
         val fos = new FileOutputStream(file)
@@ -169,7 +184,7 @@ object augment_wikidata_definitions {
 
     def executeWikidataDescriptionQuery(trimmedLabel: String): util.ArrayList[String] = {
       val query = getWikidataDescriptionQuery(trimmedLabel)
-      val response: Unit = tryWith(QueryExecutionFactory.sparqlService("https://query.wikidata.org/sparql", query)){ qexec =>
+      val response: Unit = tryWith(QueryExecutionFactory.sparqlService("https://query.wikidata.org/sparql", query)) { qexec =>
         val results = qexec.execSelect()
         if (results.hasNext) {
           val soln = results.next
@@ -195,7 +210,7 @@ object augment_wikidata_definitions {
     }
 
     def getValueAsString(node: RDFNode): String = node match {
-      case lit: Literal  => lit.getLexicalForm
+      case lit: Literal => lit.getLexicalForm
       case res: Resource => res.getURI
     }
 
