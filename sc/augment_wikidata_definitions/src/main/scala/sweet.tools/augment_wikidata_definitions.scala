@@ -1,7 +1,8 @@
 package sweet.tools
 
 import java.io.{File, FileOutputStream}
-import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.time.{LocalDateTime, ZoneOffset}
 import java.util
 import java.util.Optional
 
@@ -67,7 +68,10 @@ object augment_wikidata_definitions {
             println(s"    label statement: ${trimmedLabel}")
             val wikidataDescription = executeWikidataDescriptionQuery(trimmedLabel)
             val defProp = df.getOWLAnnotationProperty("http://www.w3.org/2004/02/skos/core#definition")
-            if (wikidataDescription != null) {
+            if (wikidataDescription != null &&
+              !wikidataDescription.get(1).startsWith("genetic element in the species") &&
+              !wikidataDescription.get(1).startsWith("Wikimedia disambiguation") &&
+              !wikidataDescription.get(1).startsWith("protein-coding gene in the")) {
               if (EntitySearcher.getAnnotationObjects(owlClass, owlOntology, defProp).count() == 0) {
                 //skos:definition
                 val skosAnno = df.getOWLAnnotation(defProp, df.getOWLAnonymousIndividual)
@@ -94,9 +98,10 @@ object augment_wikidata_definitions {
                   sProp, skosAxiom.anonymousIndividualValue().get(), sourceAnno.annotationValue())
                 changes.add(new AddAxiom(owlOntology, sourceAxiom))
                 //dcterms:created
-                val ldt = LocalDateTime.now();
+                import java.time.ZoneOffset
+                val ldt = LocalDateTime.now().atOffset(ZoneOffset.of("-07:00")).format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
                 val cProp = df.getOWLAnnotationProperty("http://purl.org/dc/terms/created")
-                val createdAnno = df.getOWLAnnotation(cProp, df.getOWLLiteral(ldt.toString, OWL2Datatype.XSD_DATE_TIME))
+                val createdAnno = df.getOWLAnnotation(cProp, df.getOWLLiteral(ldt.toString, OWL2Datatype.XSD_DATE_TIME_STAMP))
                 val createdAxiom = df.getOWLAnnotationAssertionAxiom(
                   cProp, skosAxiom.anonymousIndividualValue().get(), createdAnno.annotationValue())
                 changes.add(new AddAxiom(owlOntology, createdAxiom))
@@ -141,9 +146,9 @@ object augment_wikidata_definitions {
                   sProp, skosAxiom.anonymousIndividualValue().get(), sourceAnno.annotationValue())
                 changes.add(new AddAxiom(owlOntology, sourceAxiom))
                 //dcterms:created
-                val ldt = LocalDateTime.now();
+                val ldt = LocalDateTime.now().atOffset(ZoneOffset.of("-07:00")).format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
                 val cProp = df.getOWLAnnotationProperty("http://purl.org/dc/terms/created")
-                val createdAnno = df.getOWLAnnotation(cProp, df.getOWLLiteral(ldt.toString, OWL2Datatype.XSD_DATE_TIME))
+                val createdAnno = df.getOWLAnnotation(cProp, df.getOWLLiteral(ldt.toString, OWL2Datatype.XSD_DATE_TIME_STAMP))
                 val createdAxiom = df.getOWLAnnotationAssertionAxiom(
                   cProp, skosAxiom.anonymousIndividualValue().get(), createdAnno.annotationValue())
                 changes.add(new AddAxiom(owlOntology, createdAxiom))
