@@ -149,7 +149,7 @@ def getCorInfo(corClient: CorClient): Map[String, Sha256] = {
 def getGithubInfo: Map[String, Sha256] = {
   print("Getting Github info: ")
   Console.out.flush()
-  val elements = Github.listPaths map { path ⇒
+  val elements = Github.listPaths flatMap { path ⇒
     val iri: String = {
       if (path.startsWith("src/"))
         s"http://sweetontology.net/" + path.substring("src/".length)
@@ -160,14 +160,20 @@ def getGithubInfo: Map[String, Sha256] = {
       else if (path == "alignments/sweet-dcat-mapping.ttl")
         "http://sweetontology.net/alignment/dcat"
 
-      else
-        throw new RuntimeException(s"unexpected path: '$path'")
+      else {
+        // TODO any explicit handing? eg, with alignments/sweet-qudt-mapping.ttl
+        println(s"\nWARN: ignoring unexpected path: '$path'")
+        ""
+      }
     }.replaceFirst("\\.ttl$", "")
 
-    print(".")
-    Console.out.flush()
-    val contents = Github.getFile(path)
-    iri → sha256(contents)
+    if (iri.nonEmpty) {
+      print(".")
+      Console.out.flush()
+      val contents = Github.getFile(path)
+      Some(iri → sha256(contents))
+    }
+    else None
   }
   println(s"\n(${elements.length} paths retrieved)")
   elements.toMap
